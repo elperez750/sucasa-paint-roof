@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
 
 const config: Config = {
   content: [
@@ -7,7 +8,26 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    colors: {
+      blue: "#15223D",
+      red: "#CB403A",
+      black: "#070711",
+      gray: "#8A8AA4",
+      white: "#FFFFFF",
+      light_gray: "#F7F7F7",
+    
+
+
+    },
+
     extend: {
+      fontFamily: {
+
+        sans: ["var(--font-opensans)"],
+        poppins: ["var(--font-poppins)"],
+        
+
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -15,6 +35,18 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(({ matchUtilities, theme }: { matchUtilities: any, theme: any }) => {
+      matchUtilities(
+        {
+          'text-shadow': (value: string) => ({
+            textShadow: value,
+          }),
+        },
+        { values: theme('textShadow') as Record<string, string> }
+      )
+    }),
+  ],
+
 };
 export default config;
