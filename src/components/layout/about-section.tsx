@@ -8,7 +8,6 @@ import Eco from "../../../public/images/eco.svg";
 import Shield from "../../../public/images/shield.svg";
 import Button from "../ui/button";
 import Image from "next/image";
-import TextHeader from "../ui/text-header";
 import RoundButton from "../ui/round-button";
 import Svg from "../ui/svg";
 
@@ -25,16 +24,16 @@ export default function AboutSection() {
       </div>
 
       <div className="grid grid-rows-3 grid-flow-col md:grid-rows-2 md:grid-flow-col lg:flex lg:justify-between lg:items-center mt-16 lg:mr-10 lg:ml-10">
-        <Svg svgComponent={Brush} text="Quality" width={12} height={12}/>
-        <Svg svgComponent={Trophy} text="Experience" width={12} height={12}/>
-        <Svg svgComponent={Price} text="Competitive Pricing" width={12} height={12}/>
+        <Svg svgComponent={Brush} text="Quality" width={12} height={10}/>
+        <Svg svgComponent={Trophy} text="Experience" width={12} height={10}/>
+        <Svg svgComponent={Price} text="Competitive Pricing" width={12} height={10}/>
         <Svg
           svgComponent={Hand}
           text="Customer Satisfaction Guaranteed"
-          width={12} height={12}
+          width={12} height={10}
         />
-        <Svg svgComponent={Shield} text="Licensed and Insured" width={12} height={12}/>
-        <Svg svgComponent={Eco} text="Eco-Friendly" width={12} height={12}/>
+        <Svg svgComponent={Shield} text="Licensed and Insured" width={12} height={10}/>
+        <Svg svgComponent={Eco} text="Eco-Friendly" width={12} height={10}/>
       </div>
       <div className="text-center mt-20">
         <Button

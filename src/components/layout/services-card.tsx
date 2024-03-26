@@ -15,21 +15,22 @@ export default function ServicesCard({
   paragraph,
 }: ServiceCardProps) {
   return (
-    <div className="flex flex-col w-[20rem] h-[16rem] md:w-[30rem] md:h-[24rem] lg:w-[30rem] lg:h-[40rem] xl:ml-2 bg-white border rounded-lg overflow-hidden">
-      <div className="flex-1 md:block md:w-full md:h-1/2 md:relative">
+  
+    <div className="flex flex-col mt-10 mr-10 ml-10 w-[20rem] h-[16rem] md:w-[30rem] md:h-[24rem] xl:w-[30rem] xl:h-[40rem] xl:ml-2 bg-white border rounded-lg overflow-hidden">
+      <div className="hidden flex-1 md:block md:w-full md:h-1/2 md:relative">
         <Image src={imageUrl} alt={header} layout="fill" objectFit="cover" />
       </div>
       <div className="flex-shrink-0 p-6 flex flex-col justify-between">
         {" "}
         {/* flex-1 allows this div to fill the rest of the card space */}
         <div>
-          <div className="text-sm font-semibold mb-2">
-            <h1 className="font-poppins text-2xl font-bold text-center">
+          <div className="font-semibold mb-2">
+            <h1 className="font-poppins text-md font-bold text-center lg:text-xl xl:text-2xl">
               {header}
             </h1>
           </div>
 
-          <p className="text-gray text-xs lg:text-base font-poppins">
+          <p className="text-gray text-xs lg:text-md font-poppins xl:text-base text-left">
             {paragraph}
           </p>
           <div className="justify-start items-end px-2 py-10 rounded-b-lg">

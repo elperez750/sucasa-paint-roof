@@ -14,7 +14,7 @@ export default function OurGoal() {
           find the right developer for their team.
         </p>
       </div>
-      <div className="flex justify-center items-center ">
+      <div className="flex flex-col items-center lg:flex lg:flex-row lg:justify-evenly">
         <ServicesCard
           imageUrl="/images/home/interior.jpg"
           header="Interior Painting"
@@ -27,8 +27,8 @@ export default function OurGoal() {
         />
         <ServicesCard
           imageUrl="/images/home/roof_repair.jpeg"
-          header="Roof Repair and Pressure Wash"
-          paragraph="Protect and Perfect Your Home with Sucasa Paint and Roof! Our expert roof repair and pressure washing services ensure your home is both beautiful and durable. Experience top-notch maintenance that safeguards your home against the elements, all while boosting its curb appeal in the Seattle area. Trust us to keep your home in pristine condition!"
+          header="Roofing and Washing"
+          paragraph="Protect and Perfect Your Home with Sucasa Paint and Roof! Our expert roof repair and pressure washing services ensure your home is both beautiful and durable. Experience top-notch maintenance that safeguards your home against the elements."
         />
       </div>
       )

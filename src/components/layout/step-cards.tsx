@@ -37,7 +37,7 @@ const StepCard = ({ imageUrl, text, iconUrl }: StepCardProps) => {
       <h1 className="mt-40 text-center bold font-poppins text-xl">
         Schedule a free estimate
       </h1>
-      <p>
+      <p className="p-10 text-center">
         Begin your journey to a refreshed space by scheduling a no-obligation,
         free estimate. Our expert will assess the area, understand your
         requirements, and provide a detailed quote tailored to your needs.
