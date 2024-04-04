@@ -11,6 +11,9 @@ import Image from "next/image";
 import RoundButton from "../ui/round-button";
 import Svg from "../ui/svg";
 
+
+
+
 export default function AboutSection() {
   return (
     <div>

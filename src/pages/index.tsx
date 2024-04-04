@@ -4,6 +4,9 @@ import ImageHeader from "../components/layout/image-header";
 import AboutSection from "@/components/layout/about-section";
 import OurGoal from "@/components/layout/our-goal";
 import LocationSteps from "@/components/layout/location-and-steps";
+import PortfolioSection from "@/components/layout/portfolio-section";
+import MiniEstimateForm from "@/components/layout/mini-estimate-form";
+import Footer from "@/components/layout/footer";
 export default function Home() {
   return (
     <>
@@ -12,6 +15,10 @@ export default function Home() {
       <AboutSection />
       <OurGoal />
       <LocationSteps />
+      <PortfolioSection />
+      <MiniEstimateForm />
+      <Footer />
+     
     </>
   );
 }

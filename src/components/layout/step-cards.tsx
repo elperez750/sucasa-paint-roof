@@ -5,9 +5,17 @@ type StepCardProps = {
   imageUrl: string;
   text: string;
   iconUrl: string;
+  heading: string;
+  paragraph: string;
 };
 
-const StepCard = ({ imageUrl, text, iconUrl }: StepCardProps) => {
+const StepCard = ({
+  imageUrl,
+  text,
+  iconUrl,
+  heading,
+  paragraph,
+}: StepCardProps) => {
   return (
     <div className="flex flex-col">
       <div className="flex justify-center items-center">
@@ -34,13 +42,11 @@ const StepCard = ({ imageUrl, text, iconUrl }: StepCardProps) => {
           </div>
         </div>
       </div>
-      <h1 className="mt-40 text-center bold font-poppins text-xl">
-        Schedule a free estimate
+      <h1 className="mt-40 text-center font-bold font-poppins text-xl">
+        {heading}
       </h1>
-      <p className="p-10 text-center">
-        Begin your journey to a refreshed space by scheduling a no-obligation,
-        free estimate. Our expert will assess the area, understand your
-        requirements, and provide a detailed quote tailored to your needs.
+      <p className="p-10 text-center font-poppins text-base">
+        {paragraph}
       </p>
     </div>
   );
