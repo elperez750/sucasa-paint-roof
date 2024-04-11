@@ -22,23 +22,32 @@ export default function FormInput({
 }: FormInputProps) {
   const gridSpanClass = `col-span-${colSpan} row-span-${rowSpan}`;
 
-  const baseClasses = `w-full p-4 border-2 rounded-sm focus:ring-${backgroundColor} text-${textColor} bg-${backgroundColor} border-${borderColor}`;
+  const styles = {
+    backgroundColor: backgroundColor, // Ensuring the passed color is valid
+    color: textColor,
+    borderColor: borderColor, // Assuming borderColor is a valid CSS color
+  };
+
+  const baseClasses = `w-full p-4 border-2 rounded-sm `;
 
   return (
-    <div className={`${gridSpanClass} flex flex-col font-poppins justify-center`}>
+    <div className={`${gridSpanClass} font-poppins justify-center`}>
       <h1 className="text-lg font-bold text-white mb-2">{header}</h1>
       {inputSize === "regular" ? (
         <input
           type="text"
           className={`${baseClasses}`}
           placeholder={placeholder}
+          style={styles}
         />
       ) : (
         
           <textarea
             className={`${baseClasses} h-56`} // h-48 is an arbitrary height, adjust as needed
             placeholder={placeholder}
-          />
+            rows={2}
+            cols={2}
+          ></textarea>
       
         
       )}
