@@ -3,11 +3,12 @@ import Image from "next/image";
 import Button from "../ui/button";
 
 
+
 type ImageHeaderProps = {
   imageUrl: string;
   heading: string;
   subheading: string;
-  buttonLabel: string;
+  buttonLabel?: string;
 };
 
 
@@ -30,7 +31,10 @@ export default function ImageHeader({ imageUrl, heading, subheading, buttonLabel
         <h3 className="font-poppins text-light_gray my-20 text-sm md:text-2xl font-medium ">
           {subheading}
         </h3>
-        <Button backgroundColor="red" buttonType="primary" textColor="white" label={buttonLabel} />
+        {buttonLabel &&  <Button backgroundColor="red" buttonType="primary" textColor="white" label={buttonLabel} />}
+                 
+
+        
       </div>
     </div>
   );
