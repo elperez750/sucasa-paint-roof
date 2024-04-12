@@ -6,6 +6,7 @@ import OurGoal from "@/components/layout/our-goal";
 import LocationSteps from "@/components/layout/location-and-steps";
 import PortfolioSection from "@/components/layout/portfolio-section";
 import MiniEstimateForm from "@/components/layout/mini-estimate-form";
+
 import Footer from "@/components/layout/footer";
 export default function Home() {
   return (
