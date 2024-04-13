@@ -41,7 +41,7 @@ export default function ServiceValues() {
 </div>
 <div className="flex flex-col items-center justify-center bg-light_gray size-full">
   <Svg svgComponent={leadership} text="Leadership" width={12} height={12} textSize="text-3xl" />
-  <p className="text-base text-center mt-10 font-poppins italic">
+  <p className="text-base text-center mt-10 font-poppins italic"> 
     Leadership at Sucasa Paint and Roof is steering the helm with innovation, vision, and integrity. We lead the industry by setting benchmarks in quality, customer satisfaction, and sustainable practices.
   </p>
 </div>

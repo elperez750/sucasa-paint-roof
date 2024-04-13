@@ -5,6 +5,7 @@ import Interior from "../../../public/images/interior/interior.jpg";
 import CallToAction from "@/components/layout/call-to-action";
 import StarterServicesSection from "@/components/layout/services/starter-services-section";
 import ServiceValues from "@/components/layout/services/service-values";
+import ServiceDescription from "@/components/layout/services/service-description";
 export default function Page() {
   return (
     <>
@@ -22,6 +23,7 @@ Experience the transformative power of a fresh coat of paint, a simple yet profo
         buttonLabel="Get Started"
       />
       <ServiceValues />
+      <ServiceDescription />
     </>
   );
 }
