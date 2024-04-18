@@ -13,7 +13,7 @@ export default function Navbar() {
     <>
       {/* sub navigation bar */}
 
-      <div className="w-screen h-16 bg-blue flex items-center justify-start">
+      <div className="w-full h-16 bg-blue flex items-center justify-start">
         <div className="flex items-center justify-start space-x-10 ml-10">
           <div className="w-8 h-8 fill-white">
             <Phone />
@@ -25,7 +25,7 @@ export default function Navbar() {
       </div>
 
       {/* main navigation bar */}
-      <div className="w-screen h-36 bg-white flex items-center justify-between px-16 ">
+      <div className="w-full h-36 bg-white flex items-center justify-between px-16 ">
         <div className="flex items-start">
           <Image
             src="/images/sucasapaint.png"
