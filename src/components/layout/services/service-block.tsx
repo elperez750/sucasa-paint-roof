@@ -6,33 +6,34 @@ interface ServiceBlockProps {
   headerText: string;
   additionalText?: string;
   children: React.ReactNode;
-  order?: string;
+  order?: "left" | "right";
 }
 
 export default function ServiceBlock({
-    image,
-    headerText,
-    additionalText,
-    children,
-    order="left",
+  image,
+  headerText,
+  additionalText,
+  children,
+  order = "left",
 }: ServiceBlockProps) {
-    return (
-        <div className={`flex justify-evenly ${order === "right" ? "flex-row-reverse" : ""}`}>
-        <div className="flex flex-col">
-            <TextHeader
-                headerText={headerText}
-                textColor="white"
-                additionalText={additionalText}
-            />
-            <p className="font-poppins font-italic text-white text-lg p-6">
-                {children}
-            </p>
-        </div>
-        <div className="relative w-full h-96">
+  return (
+    <div className={`container mx-auto flex flex-wrap items-center my-10 ${order === "right" ? "flex-row-reverse" : "flex-row"}`}>
+      {/* Text Section */}
+      <div className="md:w-1/2 w-full flex flex-col justify-center items-start px-6 md:px-12">
+        <TextHeader
+          headerText={headerText}
+          textColor="white"
+          additionalText={additionalText}
+        />
+        <p className="text-white text-sm lg:text-lg mt-4">
+          {children}
+        </p>
+      </div>
 
-            <Image src={image} alt="Service image" layout="fill" objectFit="cover"/>
-        </div>
+      {/* Image Section */}
+      <div className="md:w-1/2 w-full flex justify-center md:justify-end px-6 md:px-12">
+        <Image src={image} alt="Service image" width={700} height={700} className="rounded-lg shadow-lg" />
+      </div>
     </div>
-        
-    );
+  );
 }
