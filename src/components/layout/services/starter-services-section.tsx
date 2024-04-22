@@ -20,7 +20,7 @@ export default function StarterServicesSection({ imageSrc, header, paragraph, bu
           
             {/* Text Section */}
             <div className="md:w-1/2 w-full flex flex-col justify-center items-start md:pl-10">
-                <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray font-poppins">{header}</h1>
+                <h1 className="title-font sm:text-4xl text-3xl mb-4 font-semibold text-blue font-poppins">{header}</h1>
                 <p className="mb-8 leading-relaxed font-poppins">{paragraph}</p>
                 <div className="flex justify-center md:justify-start">
                     <Button backgroundColor="red" buttonType="primary" textColor="white" label={buttonLabel} />

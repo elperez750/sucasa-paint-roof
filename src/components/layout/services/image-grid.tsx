@@ -15,7 +15,7 @@ interface ImageGridProps {
 const ImageGrid: React.FC<ImageGridProps> = ({ images }) => {
   return (
     <>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-10"> 
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-10"> 
       {images.map((img, index) => (
         <ServiceImage key={index} imageUrl={img.imageUrl} imageHeading={img.imageHeading} />
       ))}

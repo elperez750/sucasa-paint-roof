@@ -8,7 +8,7 @@ interface TextHeaderProps {
 export default function TextHeader({ headerText, textColor="black", additionalText}: TextHeaderProps) {
   return (
     <>
-      <div className="flex flex-col p-6">
+      <div className="flex flex-col">
         <h3 className={`font-poppins text-lg md:text-3xl font-bold text-${textColor}`}>{additionalText}</h3>
         <h1 className={`font-poppins text-2xl md:text-5xl font-bold text-${textColor}`}>
           {headerText}
