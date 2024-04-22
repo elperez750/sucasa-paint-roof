@@ -1,7 +1,6 @@
 import React from 'react';
 import Button from '@/components/ui/button';
 import Image from 'next/image';
-import bathroom from "../../../../public/images/home/bathroom.jpeg";
 
 interface StarterServicesSectionProps {
     imageSrc: string;
