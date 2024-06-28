@@ -10,17 +10,17 @@ import ImageGrid from "@/components/layout/services/image-grid";
 import { FAQ } from "@/components/layout/services/faq-item";
 import FAQList from "@/components/layout/services/faq-list";
 import Footer from "@/components/layout/footer";
-import ServiceBlock from "@/components/layout/services/service-block";
-import pressureheader from "../../../public/images/washing/pressureheader.avif";
 import pressuresiding from "../../../public/images/washing/pressuresiding.jpeg";
 import pressuregun from "../../../public/images/washing/pressuregun.jpg";
 import pressuredriveway from "../../../public/images/washing/pressuredriveway.jpg";
 import windowwashing from "../../../public/images/washing/windowwashing.jpg";
+import pressureheader from "../../../public/images/washing/pressureheader.jpg";
 import fencewashing from "../../../public/images/washing/fencewashing.jpg";
 import concretecleaning from "../../../public/images/washing/concretecleaning.png";
 import deckcleaning from "../../../public/images/washing/deckcleaning.jpg";
 import commercialwashing from "../../../public/images/washing/commercialwashing.png";
 import roofcleaning from  "../../../public/images/washing/roofcleaning.jpg";
+import ServiceBlock from "@/components/layout/services/service-block";
 
 const images = [
  {imageUrl: fencewashing.src, imageHeading: "Fence Washing",},
@@ -59,7 +59,7 @@ const faqItems: FAQ[] = [
   },
   {
     question: "Can pressure washing remove stains from my deck or patio?",
-    answer:
+    answer: 
       "Yes, pressure washing can effectively remove stains, dirt, algae, mold, and mildew from decks, patios, and other outdoor surfaces. However, it's essential to use the appropriate pressure setting and cleaning solution to avoid damaging the wood or other materials.",
   },
   {
@@ -88,8 +88,7 @@ export default function Page() {
       <StarterServicesSection
         imageSrc={pressuresiding.src}
         header="Elevate Your Home's Cleanliness"
-        paragraph="
-Remove dirt, mold, and grime from your home's exterior surfaces with our professional pressure washing services. Our experienced team uses state-of-the-art equipment and eco-friendly cleaning solutions to deliver exceptional results that restore the beauty and freshness of your home."
+        paragraph = "Remove dirt, mold, and grime from your home's exterior surfaces with our professional pressure washing services. Our experienced team uses state-of-the-art equipment and eco-friendly cleaning solutions to deliver exceptional results that restore the beauty and freshness of your home."
         buttonLabel="Get Started"
       />
       <ServiceValues />

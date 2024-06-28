@@ -107,8 +107,7 @@ export default function Page() {
       <StarterServicesSection
         imageSrc={kitchen.src}
         header="Interior Services"
-        paragraph="
-Experience the transformative power of a fresh coat of paint, a simple yet profoundly impactful way to rejuvenate and revitalize any space. This process is not just about changing a color; it's about renewing the very essence of your surroundings, imbuing them with a new spirit and vibrancy that can alter perceptions, influence moods, and enhance the overall ambiance. "
+        paragraph="Experience the transformative power of a fresh coat of paint, a simple yet profoundly impactful way to rejuvenate and revitalize any space. This process is not just about changing a color; it's about renewing the very essence of your surroundings, imbuing them with a new spirit and vibrancy that can alter perceptions, influence moods, and enhance the overall ambiance." 
         buttonLabel="Get Started"
       />
       <ServiceValues />

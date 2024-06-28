@@ -1,6 +1,6 @@
 import React from "react";
 
-type IconProps = {
+interface IconProps {
     svgComponent: React.ElementType;
     text?: string;
     width: number;

@@ -9,7 +9,7 @@ export default function MiniEstimateForm() {
   return (
     <div className="bg-gradient-to-r from-gray to-blue shadow-md">
       <div className="flex justify-start">
-        <TextHeader headerText="Get An Estimate!" textColor="white" />
+        <TextHeader headerText="Get An Estimate!" headerTextColor="white" />
       </div>
       <p className="p-5 font-poppins text-sm md:text-base text-white">
         Take the next step to improving your home today! Our team offers free

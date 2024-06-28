@@ -4,12 +4,14 @@ import Button from "../ui/button";
 
 
 
-type ImageHeaderProps = {
+interface ImageHeaderProps {
   imageUrl: string;
   heading: string;
   subheading: string;
   buttonLabel?: string;
 };
+
+
 
 
 export default function ImageHeader({ imageUrl, heading, subheading, buttonLabel }: ImageHeaderProps) {

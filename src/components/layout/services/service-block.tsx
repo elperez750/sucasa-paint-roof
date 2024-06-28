@@ -24,7 +24,8 @@ export default function ServiceBlock({
       <div className="lg:w-1/2 w-full flex flex-col justify-center items-start md:px-12">
         <TextHeader
           headerText={headerText}
-          textColor="white"
+          headerTextColor="white"
+          additionalTextColor="red"
           additionalText={additionalText}
         />
         <p className="text-white font-poppins text-sm lg:text-lg mt-4">
