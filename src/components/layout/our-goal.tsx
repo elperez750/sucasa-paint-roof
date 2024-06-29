@@ -14,11 +14,12 @@ export default function OurGoal() {
           find the right developer for their team.
         </p>
       </div>
-      <div className="flex flex-col items-center lg:flex lg:flex-row lg:justify-evenly">
+      <div className="flex flex-col items-center lg:flex lg:flex-row lg:justify-evenly ">
         <ServicesCard
           imageUrl="/images/home/interior.jpg"
           header="Interior Painting"
           paragraph="Elevate Your Home with Sucasa Paint and Roof! Our expert interior painting services promise to transform your space with vibrant colors and flawless finishes. Let us bring your vision to life with elegance and precision. Refresh, renew, and beautify your home with us!"
+        
         />
         <ServicesCard
           imageUrl="/images/home/exterior.jpg"

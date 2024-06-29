@@ -9,8 +9,8 @@ interface testimonalProps {
 
 export default function Testimonal({paragraph, name}: testimonalProps){
     return (
-        <div className="flex flex-col 2xl:w-96 2xl:h-56 justify-center items-center mt-36">
-            <div className="flex justify-center items-center h-full p-10">
+        <div className="flex flex-col 2xl:w-96 2xl:h-56 xl:w-80 xl:h-40 justify-center items-center mt-48">
+            <div className="flex justify-center items-center ">
             <Svg
                 svgComponent={Star}
                 width={8}
@@ -37,7 +37,7 @@ export default function Testimonal({paragraph, name}: testimonalProps){
                 height={8}
               />
               </div>
-            <p className="font-poppins text-center text-md lg:text-xl">{paragraph}</p>
+            <p className="font-poppins text-justify hyphens-auto text-md lg:text-lg xl:pt-6 2xl:text-xl ">{paragraph}</p>
             <h1 className="font-poppins text-center mt-6 text-red text-2xl">{name}</h1>
         </div>
     );

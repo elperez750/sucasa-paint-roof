@@ -16,7 +16,7 @@ export default function ServicesCard({
 }: ServiceCardProps) {
   return (
   
-    <div className="flex flex-col mt-10 mr-10 ml-10 w-[20rem] h-[16rem] md:w-[30rem] md:h-[24rem] xl:w-[30rem] xl:h-[40rem] xl:ml-2 bg-white border rounded-lg overflow-hidden">
+    <div className="flex flex-col mt-10 mr-10 ml-10 w-[20rem] h-[16rem] md:w-[30rem] md:h-[24rem] xl:w-[30rem] xl:h-[40rem] xl:ml-2 bg-white border rounded-lg overflow-hidden shadow transition duration-300 ease-in-out hover:shadow-lg hover:scale-105 hover:bg-gray-100 cursor-pointer">
       <div className="hidden flex-1 md:block md:w-full md:h-1/2 md:relative">
         <Image src={imageUrl} alt={header} layout="fill" objectFit="cover" />
       </div>

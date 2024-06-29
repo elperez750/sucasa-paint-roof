@@ -33,26 +33,18 @@ export default function PortfolioSection() {
         </div>
 
         <div className="flex justify-center lg:container">
-          <div className="grid grid-rows-7 grid-cols-4 gap-4 h-[40rem] w-[50rem] p-5">
+          <div className="grid grid-rows-7 grid-cols-4 gap-4 h-[40rem] w-[50rem] p-5 ">
            
-              <div className="relative row-span-4 col-span-2 w-full overflow-hidden rounded-md">
+              <div className="relative row-span-4 col-span-2 w-full overflow-hidden rounded-md shadow transition duration-300 ease-in-out hover:shadow-lg hover:scale-105 hover:bg-gray">
                 <Image
                   src="/images/home/cabinet.jpg"
                   alt="Large"
                   layout="fill"
                   objectFit="cover"
                 />
-                d
+                
               </div>
-              <div className="relative row-span-3 col-span-2 w-full overflow-hidden rounded-md">
-                <Image
-                  src="/images/home/cabinet.jpg"
-                  alt="Large"
-                  layout="fill"
-                  objectFit="cover"
-                />
-              </div>
-              <div className="relative row-span-4 col-span-2 w-full overflow-hidden rounded-md">
+              <div className="relative row-span-3 col-span-2 w-full overflow-hidden rounded-md transition duration-300 ease-in-out hover:shadow-lg hover:scale-105 hover:bg-gray">
                 <Image
                   src="/images/home/cabinet.jpg"
                   alt="Large"
@@ -60,7 +52,15 @@ export default function PortfolioSection() {
                   objectFit="cover"
                 />
               </div>
-              <div className="relative row-span-3 col-span-2 w-full overflow-hidden rounded-md">
+              <div className="relative row-span-4 col-span-2 w-full overflow-hidden rounded-md transition duration-300 ease-in-out hover:shadow-lg hover:scale-105 hover:bg-gray">
+                <Image
+                  src="/images/home/cabinet.jpg"
+                  alt="Large"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+              <div className="relative row-span-3 col-span-2 w-full overflow-hidden rounded-md transition duration-300 ease-in-out hover:shadow-lg hover:scale-105 hover:bg-gray">
                 <Image
                   src="/images/home/cabinet.jpg"
                   alt="Large"

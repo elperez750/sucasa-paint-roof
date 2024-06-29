@@ -43,14 +43,14 @@ export default function AboutSection() {
           backgroundColor="black"
           buttonType="primary"
           textColor="white"
-          label="Schedule an estimate."
+          label="Schedule an estimate"
         />
       </div>
 
       {/* Container for both of the cards */}
       <div className="flex flex-col justify-center items-center mt-20 xl:flex-row">
         {/* Container for the first pair of cards */}
-        <div className="relative w-[20rem] h-[16rem] md:w-[30rem] md:h-[24rem] lg:w-[40rem] lg:h-[32rem] xl:mr-20">
+        <div className="relative w-[20rem] h-[16rem] md:w-[30rem] md:h-[24rem] lg:w-[40rem] lg:h-[32rem] xl:mr-20 shadow transition duration-300 ease-in-out hover:shadow-lg hover:scale-105 hover:bg-gray cursor-pointer">
           {/* Background Card */}
           <div className="absolute inset-0 bg-blue rounded-lg shadow-lg" />
           {/* Foreground Card */}
@@ -97,7 +97,7 @@ export default function AboutSection() {
           </div>
         </div>
 
-        <div className="mt-20 relative w-[20rem] h-[16rem] md:w-[30rem] md:h-[24rem] lg:w-[40rem] lg:h-[32rem] xl:mt-0">
+        <div className="mt-20 relative w-[20rem] h-[16rem] md:w-[30rem] md:h-[24rem] lg:w-[40rem] lg:h-[32rem] xl:mt-0 shadow transition duration-300 ease-in-out hover:shadow-lg hover:scale-105 hover:bg-gray-100 cursor-pointer">
           {/* Background Card */}
           <div className="absolute inset-0 bg-blue rounded-lg shadow-lg" />
           {/* Foreground Card */}

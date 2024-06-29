@@ -9,6 +9,7 @@ interface FormInputProps {
   borderColor: string;
   colSpan?: number;
   rowSpan?: number;
+  className?: string;
 }
 export default function FormInput({
   header,
@@ -19,6 +20,7 @@ export default function FormInput({
   borderColor,
   colSpan = 1,
   rowSpan = 1,
+  className = ""
 }: FormInputProps) {
   const gridSpanClass = `col-span-${colSpan} row-span-${rowSpan}`;
 
@@ -26,9 +28,10 @@ export default function FormInput({
     backgroundColor: backgroundColor, // Ensuring the passed color is valid
     color: textColor,
     borderColor: borderColor, // Assuming borderColor is a valid CSS color
+    className:  className,
   };
 
-  const baseClasses = `w-full p-4 border-2 rounded-sm `;
+  const baseClasses = `w-full p-4 border-2 rounded-sm ${className}`;
 
   return (
     <div className={`${gridSpanClass} font-poppins justify-center`}>

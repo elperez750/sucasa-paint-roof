@@ -18,7 +18,7 @@ const Button: React.FC<ButtonProps> = ({ buttonType, label,backgroundColor, text
         const baseClasses = ` py-2 px-6 shadow focus:outline-none focus:ring-2 focus:ring-opacity-50 transition ease-in-out duration-150 font-poppins font-semibold text-sm md:text-base mt-5 ${className}`;
         if (buttonType === "primary") {
             // For primary, we apply a background color
-            return `${baseClasses} bg-${backgroundColor} text-${textColor} focus:ring-${backgroundColor}`;
+            return `${baseClasses} bg-${backgroundColor} text-${textColor} focus:ring-${backgroundColor} hover:bg-white hover:border-${backgroundColor} hover:border-2 hover:text-${backgroundColor} hover:bg-white hover:text-${backgroundColor}`;
         } else {
             // For secondary, we apply a border color
             return `${baseClasses} border-${backgroundColor} border-4 text-${textColor} focus:ring-${backgroundColor}`;

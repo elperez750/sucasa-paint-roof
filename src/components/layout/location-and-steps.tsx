@@ -14,7 +14,6 @@ export default function LocationSteps() {
         imageUrl="/images/home/seattle.jpeg"
         buttonLabel="View Service Areas"
       />
-      <CallToAction />
       <div className="flex flex-col justify-center items-center mt-20">
         <TextHeader headerText="A seamless experience from start to finish" />
         <h2 className="text-red text-sm text md:text-xl font-poppins">

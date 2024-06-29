@@ -131,7 +131,7 @@ export default function page() {
           Washington.
         </p>
       </div>
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         <ServiceArea imageUrl={Bellevue.src} cityName="Bellevue" />
         <ServiceArea imageUrl={Seattle.src} cityName="Seattle" />
         <ServiceArea imageUrl={Tacoma.src} cityName="Tacoma" />
