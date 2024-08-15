@@ -10,9 +10,10 @@ import ImageGrid from "@/components/layout/services/image-grid";
 import { FAQ } from "@/components/layout/services/faq-item";
 import FAQList from "@/components/layout/services/faq-list";
 import Footer from "@/components/layout/footer";
+import ServiceBlock from "@/components/layout/services/service-block";
+
 import roofing from "../../../public/images/roofing/roof.jpg";
 import roofheader from "../../../public/images/roofing/roofheader.jpeg";
-import ServiceBlock from "@/components/layout/services/service-block";
 import roofgutter from "../../../public/images/roofing/roofgutter.jpg";
 import roofrepair from "../../../public/images/roofing/roofrepair.jpeg";
 import skylight from "../../../public/images/roofing/skylight.jpg";
@@ -117,13 +118,7 @@ Elevate your home's protection and aesthetic appeal with our comprehensive roofi
         headerText="Unwavering Excellence and Craftsmanship"
         additionalText="What we do"
       >
-        At Sucasa Paint and Roof Care, we pride ourselves on delivering
-        unwavering excellence and craftsmanship in every roofing project. With
-        meticulous attention to detail and quality materials, we ensure that
-        your roof not only looks beautiful but also provides reliable protection
-        for years to come. Whether it's a minor repair or a complete roof
-        replacement, you can trust our team to deliver superior results and
-        exceptional service from start to finish.
+        At Sucasa Paint and Roof Care, we pride ourselves on delivering unwavering excellence and craftsmanship in every roofing project. With meticulous attention to detail and quality materials, we ensure that your roof not only looks beautiful but also provides reliable protection for years to come. Whether it's a minor repair or a complete roof replacement, you can trust our team to deliver superior results and exceptional service from start to finish.
       </ServiceBlock>
 
       <ServiceBlock
@@ -131,12 +126,7 @@ Elevate your home's protection and aesthetic appeal with our comprehensive roofi
         headerText="Enhance Your Home's Protection with Expert Exterior Solutions"
         order="right"
       >
-        Protect your home from the elements and enhance its curb appeal with our
-        expert exterior solutions. From gutter installation to chimney flashing
-        and skylight repair, our skilled team handles every aspect of your
-        exterior with precision and care. With our commitment to quality
-        craftsmanship and customer satisfaction, you can trust us to deliver
-        lasting results that enhance the beauty and value of your home.
+        Protect your home from the elements and enhance its curb appeal with our expert exterior solutions. From gutter installation to chimney flashing and skylight repair, our skilled team handles every aspect of your exterior with precision and care. With our commitment to quality craftsmanship and customer satisfaction, you can trust us to deliver lasting results that enhance the beauty and value of your home.
       </ServiceBlock>
 
       <ServicesOffered />

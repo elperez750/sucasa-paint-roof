@@ -10,6 +10,8 @@ import ImageGrid from "@/components/layout/services/image-grid";
 import { FAQ } from "@/components/layout/services/faq-item";
 import FAQList from "@/components/layout/services/faq-list";
 import Footer from "@/components/layout/footer";
+import ServiceBlock from "@/components/layout/services/service-block";
+
 import pressuresiding from "../../../public/images/washing/pressuresiding.jpeg";
 import pressuregun from "../../../public/images/washing/pressuregun.jpg";
 import pressuredriveway from "../../../public/images/washing/pressuredriveway.jpg";
@@ -19,16 +21,15 @@ import fencewashing from "../../../public/images/washing/fencewashing.jpg";
 import concretecleaning from "../../../public/images/washing/concretecleaning.png";
 import deckcleaning from "../../../public/images/washing/deckcleaning.jpg";
 import commercialwashing from "../../../public/images/washing/commercialwashing.png";
-import roofcleaning from  "../../../public/images/washing/roofcleaning.jpg";
-import ServiceBlock from "@/components/layout/services/service-block";
+import roofcleaning from "../../../public/images/washing/roofcleaning.jpg";
 
 const images = [
- {imageUrl: fencewashing.src, imageHeading: "Fence Washing",},
- {imageUrl: windowwashing.src, imageHeading: "Window Washing",},
- {imageUrl: concretecleaning.src, imageHeading: "Concrete Cleaning"},
- {imageUrl: deckcleaning.src, imageHeading: "Deck Cleaning"},
- {imageUrl: commercialwashing.src, imageHeading: "Commercial Washing"},
- {imageUrl: roofcleaning.src, imageHeading: "Roof Cleaning"},  
+  { imageUrl: fencewashing.src, imageHeading: "Fence Washing" },
+  { imageUrl: windowwashing.src, imageHeading: "Window Washing" },
+  { imageUrl: concretecleaning.src, imageHeading: "Concrete Cleaning" },
+  { imageUrl: deckcleaning.src, imageHeading: "Deck Cleaning" },
+  { imageUrl: commercialwashing.src, imageHeading: "Commercial Washing" },
+  { imageUrl: roofcleaning.src, imageHeading: "Roof Cleaning" },
 ];
 
 const faqItems: FAQ[] = [
@@ -59,7 +60,7 @@ const faqItems: FAQ[] = [
   },
   {
     question: "Can pressure washing remove stains from my deck or patio?",
-    answer: 
+    answer:
       "Yes, pressure washing can effectively remove stains, dirt, algae, mold, and mildew from decks, patios, and other outdoor surfaces. However, it's essential to use the appropriate pressure setting and cleaning solution to avoid damaging the wood or other materials.",
   },
   {
@@ -88,7 +89,7 @@ export default function Page() {
       <StarterServicesSection
         imageSrc={pressuresiding.src}
         header="Elevate Your Home's Cleanliness"
-        paragraph = "Remove dirt, mold, and grime from your home's exterior surfaces with our professional pressure washing services. Our experienced team uses state-of-the-art equipment and eco-friendly cleaning solutions to deliver exceptional results that restore the beauty and freshness of your home."
+        paragraph="Remove dirt, mold, and grime from your home's exterior surfaces with our professional pressure washing services. Our experienced team uses state-of-the-art equipment and eco-friendly cleaning solutions to deliver exceptional results that restore the beauty and freshness of your home."
         buttonLabel="Get Started"
       />
       <ServiceValues />
@@ -98,14 +99,7 @@ export default function Page() {
         headerText="Unwavering Excellence and Craftsmanship"
         additionalText="What We Do"
       >
-        At Sucasa Paint and Roof Care, we pride ourselves on delivering
-        unwavering excellence and craftsmanship in every pressure washing
-        project. With meticulous attention to detail and quality materials, we
-        ensure that your home's exterior not only looks beautiful but also
-        provides a clean and inviting environment for your family and guests.
-        Whether it's removing stubborn stains from your driveway or revitalizing
-        your deck, you can trust our team to deliver superior results and
-        exceptional service from start to finish.
+        At Sucasa Paint and Roof Care, we pride ourselves on delivering unwavering excellence and craftsmanship in every pressure washing project. With meticulous attention to detail and quality materials, we ensure that your home's exterior not only looks beautiful but also provides a clean and inviting environment for your family and guests. Whether it's removing stubborn stains from your driveway or revitalizing your deck, you can trust our team to deliver superior results and exceptional service from start to finish.
       </ServiceBlock>
 
       <ServiceBlock
@@ -113,12 +107,7 @@ export default function Page() {
         headerText="Enhance Your Home's Protection"
         order="right"
       >
-        Protect your home from the elements and enhance its curb appeal with our
-        expert pressure washing services. From driveway cleaning to roof
-        washing, our skilled team handles every aspect of your home's exterior
-        with precision and care. With our commitment to quality craftsmanship
-        and customer satisfaction, you can trust us to deliver lasting results
-        that enhance the cleanliness and value of your home.
+        Protect your home from the elements and enhance its curb appeal with our expert pressure washing services. From driveway cleaning to roof washing, our skilled team handles every aspect of your home's exterior with precision and care. With our commitment to quality craftsmanship and customer satisfaction, you can trust us to deliver lasting results that enhance the cleanliness and value of your home.
       </ServiceBlock>
 
       <ServicesOffered />

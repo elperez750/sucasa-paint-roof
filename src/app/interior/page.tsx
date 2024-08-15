@@ -21,6 +21,7 @@ import FAQList from "@/components/layout/services/faq-list";
 import Footer from "@/components/layout/footer";
 import ServiceBlock from "@/components/layout/services/service-block";
 
+// Image array for the grid
 const images = [
   {
     imageUrl: bathroom.src,
@@ -46,9 +47,9 @@ const images = [
     imageUrl: trim.src,
     imageHeading: "Trim Painting",
   },
- 
 ];
 
+// FAQ items array
 const faqItems: FAQ[] = [
   {
     question: "How long does interior painting usually take?",
@@ -94,6 +95,7 @@ const faqItems: FAQ[] = [
   },
 ];
 
+// Main Page Component
 export default function Page() {
   return (
     <>
@@ -101,32 +103,32 @@ export default function Page() {
       <ImageHeader
         imageUrl={Interior.src}
         heading="Interior"
-        subheading="Explore a world where comfort meets impecable taste."
+        subheading="Explore a world where comfort meets impeccable taste."
       />
       <CallToAction />
       <StarterServicesSection
         imageSrc={kitchen.src}
         header="Interior Services"
-        paragraph="Experience the transformative power of a fresh coat of paint, a simple yet profoundly impactful way to rejuvenate and revitalize any space. This process is not just about changing a color; it's about renewing the very essence of your surroundings, imbuing them with a new spirit and vibrancy that can alter perceptions, influence moods, and enhance the overall ambiance." 
+        paragraph="Experience the transformative power of a fresh coat of paint—a simple yet profoundly impactful way to rejuvenate and revitalize any space. This process is not just about changing a color; it's about renewing the very essence of your surroundings, imbuing them with a new spirit and vibrancy that can alter perceptions, influence moods, and enhance the overall ambiance."
         buttonLabel="Get Started"
       />
       <ServiceValues />
       <CompanySlider />
       <ServiceBlock
         image={window.src}
-        headerText="What we do"
+        headerText="What We Do"
         additionalText="Our Commitment to Quality and Precision"
       >
         At Sucasa Paint and Roof Care, we understand that each space is as
         unique as the individuals who inhabit it. This belief drives our
         dedication to providing tailored solutions that cater to the specific
-        needs and aspirations of every client. Whether its a cozy cottage
+        needs and aspirations of every client. Whether it&apos;s a cozy cottage
         requiring a warm, inviting palette or a modern office space seeking a
         sleek, professional look, our team combines expertise with creativity to
         transform any area. We delve into the essence of each project,
         considering its distinct characteristics and the vision of those who
-        live or work within it. Our approach ensures that every solution isnt
-        just a service, but a personalized experience, designed to elevate and
+        live or work within it. Our approach ensures that every solution isn&apos;t
+        just a service, but a personalized experience designed to elevate and
         enrich every space we touch.
       </ServiceBlock>
 
@@ -136,15 +138,15 @@ export default function Page() {
         order="right"
       >
         We believe that every interior space is unique, deserving of its own
-        identity and character. That's why we offer tailored solutions for every
+        identity and character. That&apos;s why we offer tailored solutions for every
         room, ensuring that each space reflects your individual style and
-        personality. Whether it's a cozy bedroom, a vibrant kitchen, or an
+        personality. Whether it&apos;s a cozy bedroom, a vibrant kitchen, or an
         elegant living room, our team of experts works closely with you to
         understand your vision and bring it to life. From color selection to
         meticulous execution, we strive to create spaces that not only meet but
         exceed your expectations. With our personalized approach, we transform
         every corner of your home into a sanctuary of comfort and style, where
-        every detail is carefully considered and crafted to perfection
+        every detail is carefully considered and crafted to perfection.
       </ServiceBlock>
       <ServicesOffered />
       <ImageGrid images={images} />

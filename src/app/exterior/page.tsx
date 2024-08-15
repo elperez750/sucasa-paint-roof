@@ -20,7 +20,7 @@ import exteriordoor from "../../../public/images/exterior/exteriordoor.jpeg";
 import caulking from "../../../public/images/exterior/caulking.jpeg";
 import trim from "../../../public/images/exterior/trim.jpg";
 import deck from "../../../public/images/exterior/deck.jpg";
-import colorconsultation from "../../../public/images/exterior/colorconsultation.jpg"
+import colorconsultation from "../../../public/images/exterior/colorconsultation.jpg";
 
 const images = [
   {
@@ -47,8 +47,6 @@ const images = [
     imageUrl: colorconsultation.src,
     imageHeading: "Color Consultation",
   },
- 
-  
 ];
 
 const faqItems: FAQ[] = [
@@ -60,7 +58,7 @@ const faqItems: FAQ[] = [
   {
     question: "Do I need to cover my plants before you start painting?",
     answer:
-      "Yes, it's a good idea to cover any plants or shrubs near the area being painted to protect them from paint splatter or damage.",
+      "Yes, it&apos;s a good idea to cover any plants or shrubs near the area being painted to protect them from paint splatter or damage.",
   },
   {
     question: "What type of paint do you recommend for exterior surfaces?",
@@ -75,21 +73,21 @@ const faqItems: FAQ[] = [
   {
     question: "How do I choose the right paint color for my house exterior?",
     answer:
-      "Consider factors such as your home's architectural style, surrounding landscape, and neighborhood aesthetic. We offer color consultations to help you select the perfect color for your home's exterior.",
+      "Consider factors such as your home&apos;s architectural style, surrounding landscape, and neighborhood aesthetic. We offer color consultations to help you select the perfect color for your home&apos;s exterior.",
   },
   {
     question: "Is it safe to be around while the exterior is being painted?",
     answer:
-      "Yes, it's generally safe. However, we recommend staying indoors or away from the immediate painting area to avoid accidental contact with wet paint and to minimize exposure to paint fumes.",
+      "Yes, it&apos;s generally safe. However, we recommend staying indoors or away from the immediate painting area to avoid accidental contact with wet paint and to minimize exposure to paint fumes.",
   },
   {
     question: "How do I prepare my home for exterior painting?",
     answer:
-      "Ensure that the surfaces to be painted are clean, dry, and free of any debris. We'll handle the rest, including protecting surrounding surfaces and landscaping.",
+      "Ensure that the surfaces to be painted are clean, dry, and free of any debris. We&apos;ll handle the rest, including protecting surrounding surfaces and landscaping.",
   },
   {
     question:
-      "What's the difference between flat, satin, and semi-gloss exterior paint finishes?",
+      "What&apos;s the difference between flat, satin, and semi-gloss exterior paint finishes?",
     answer:
       "Flat finishes provide a smooth, matte appearance ideal for concealing surface imperfections. Satin finishes offer a subtle sheen and are easy to clean. Semi-gloss finishes provide a durable, glossy look suitable for high-traffic areas.",
   },
@@ -102,14 +100,14 @@ export default function Page() {
       <ImageHeader
         imageUrl={exteriorpage.src}
         heading="Exterior"
-        subheading="Explore a world where comfort meets impecable taste."
+        subheading="Explore a world where comfort meets impeccable taste."
       />
       <CallToAction />
       <StarterServicesSection
         imageSrc={bluehouse.src}
         header="Exterior Services"
         paragraph="
-Experience the transformative power of a fresh coat of paint, a simple yet profoundly impactful way to rejuvenate and revitalize any space. This process is not just about changing a color; it's about renewing the very essence of your surroundings, imbuing them with a new spirit and vibrancy that can alter perceptions, influence moods, and enhance the overall ambiance. "
+Experience the transformative power of a fresh coat of paint—a simple yet profoundly impactful way to rejuvenate and revitalize any space. This process is not just about changing a color; it&apos;s about renewing the very essence of your surroundings, imbuing them with a new spirit and vibrancy that can alter perceptions, influence moods, and enhance the overall ambiance."
         buttonLabel="Get Started"
       />
       <ServiceValues />
@@ -117,12 +115,12 @@ Experience the transformative power of a fresh coat of paint, a simple yet profo
       <ServiceBlock
         image={sidehouse.src}
         headerText="Unwavering Excellence and Craftsmanship"
-        additionalText="What we do"
+        additionalText="What We Do"
       >
-        we recognize that each exterior space holds its own charm and unique
+        We recognize that each exterior space holds its own charm and unique
         requirements. Our approach to exterior painting is centered on providing
         tailored solutions that enhance the curb appeal and protect the
-        integrity of your property. Whether it's a cozy cottage nestled in the
+        integrity of your property. Whether it&apos;s a cozy cottage nestled in the
         countryside or a modern urban dwelling, our team of skilled
         professionals works diligently to understand your specific needs and
         preferences. From selecting the right paint colors to addressing surface
@@ -146,7 +144,7 @@ Experience the transformative power of a fresh coat of paint, a simple yet profo
         aesthetic appeal of your home but also provide long-lasting protection
         against the elements. From meticulous surface preparation to the
         application of premium-quality paints, we take pride in every
-        brushstroke to ensure a flawless finish. Whether you're looking to
+        brushstroke to ensure a flawless finish. Whether you&apos;re looking to
         refresh the look of your home or boost its market value, trust us to
         bring your vision to life and make your exterior painting project a
         success.
