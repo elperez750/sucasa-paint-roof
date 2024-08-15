@@ -118,7 +118,7 @@ Elevate your home's protection and aesthetic appeal with our comprehensive roofi
         headerText="Unwavering Excellence and Craftsmanship"
         additionalText="What we do"
       >
-        At Sucasa Paint and Roof Care, we pride ourselves on delivering unwavering excellence and craftsmanship in every roofing project. With meticulous attention to detail and quality materials, we ensure that your roof not only looks beautiful but also provides reliable protection for years to come. Whether it's a minor repair or a complete roof replacement, you can trust our team to deliver superior results and exceptional service from start to finish.
+        At Sucasa Paint and Roof Care, we pride ourselves on delivering unwavering excellence and craftsmanship in every roofing project. With meticulous attention to detail and quality materials, we ensure that your roof not only looks beautiful but also provides reliable protection for years to come. Whether its a minor repair or a complete roof replacement, you can trust our team to deliver superior results and exceptional service from start to finish.
       </ServiceBlock>
 
       <ServiceBlock

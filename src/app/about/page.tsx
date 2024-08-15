@@ -63,7 +63,7 @@ export default function Page() {
                 Sucasa Paint and Roof was established in 2015 by Jesus Perez, a seasoned expert with over two decades of experience in the painting and roofing industry. Our company, rooted in the heart of our community, is dedicated to providing top-tier services in both residential and commercial sectors.
               </p>
               <p className="mt-6 text-lg">
-                We understand that each homeowner has unique needs and financial constraints. To accommodate this, we provide a range of flexible options designed to align with your specific requirements and budget. Whether you're looking to refresh a single room or repaint your entire home, we can tailor a solution that suits your needs without compromising on quality.
+                We understand that each homeowner has unique needs and financial constraints. To accommodate this, we provide a range of flexible options designed to align with your specific requirements and budget. Whether youre looking to refresh a single room or repaint your entire home, we can tailor a solution that suits your needs without compromising on quality.
               </p>
             </div>
           </div>
@@ -85,7 +85,7 @@ export default function Page() {
               Quality Work Guaranteed
             </h2>
             <p className="text-lg mt-4 mb-10">
-              With Sucasa Paint and Roof, you're not just getting a painting service; you're making an investment in your home. We stand behind our work with a satisfaction guarantee, ensuring that the finished product meets your expectations and our high standards.
+              With Sucasa Paint and Roof, youre not just getting a painting service; youre making an investment in your home. We stand behind our work with a satisfaction guarantee, ensuring that the finished product meets your expectations and our high standards.
             </p>
           </div>
         </div>
