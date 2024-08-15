@@ -49,6 +49,7 @@ export default function LocationSteps() {
           backgroundColor="black"
           textColor="white"
           label="Schedule an estimate"
+          link='/contact'
         />
       </div>
     </div>

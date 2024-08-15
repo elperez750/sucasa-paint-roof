@@ -33,7 +33,7 @@ export default function ImageHeader({ imageUrl, heading, subheading, buttonLabel
         <h3 className="font-poppins text-light_gray my-20 text-sm md:text-2xl font-medium ">
           {subheading}
         </h3>
-        {buttonLabel &&  <Button backgroundColor="red" buttonType="primary" textColor="white" label={buttonLabel} />}
+        {buttonLabel &&  <Button backgroundColor="red" buttonType="primary" textColor="white" label={buttonLabel} link='/contact' />}
                  
 
         

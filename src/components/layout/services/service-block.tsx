@@ -1,3 +1,4 @@
+import Button from "@/components/ui/button";
 import TextHeader from "@/components/ui/text-header";
 import Image from "next/image";
 
@@ -38,6 +39,7 @@ export default function ServiceBlock({
         <Image src={image} alt="Service image" width={800} height={800} className="rounded-lg shadow-lg" />
       </div>
     </div>
-    </div>
+  
+      </div>
   );
 }

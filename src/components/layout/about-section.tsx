@@ -44,6 +44,7 @@ export default function AboutSection() {
           buttonType="primary"
           textColor="white"
           label="Schedule an estimate"
+          link="/contact"
         />
       </div>
 

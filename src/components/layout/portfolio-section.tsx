@@ -28,6 +28,7 @@ export default function PortfolioSection() {
               buttonType="primary"
               textColor="white"
               label="View All Projects"
+              link="/portfolio"
             />
           </div>
         </div>

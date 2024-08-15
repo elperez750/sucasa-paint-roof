@@ -59,6 +59,7 @@ export default function MiniEstimateForm() {
           backgroundColor="red"
           textColor="white"
           className="mt-4 max-w-md  md:col-start-1 md:col-span-2"
+          link="/contact"
         />
       </form>
     </div>

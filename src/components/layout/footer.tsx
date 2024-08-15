@@ -61,6 +61,7 @@ export default function Footer() {
               label="Get Started"
               backgroundColor="red"
               textColor="white"
+              link="/contact"
             />
           </div>
         </div>

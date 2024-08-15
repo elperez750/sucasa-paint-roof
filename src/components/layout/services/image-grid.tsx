@@ -25,7 +25,7 @@ const ImageGrid: React.FC<ImageGridProps> = ({ images }) => {
 
     </div>
     <div className="flex items-center justify-center">
-          <Button buttonType="primary" label="Get a Free Estimate" backgroundColor="blue" textColor='white'/>
+          <Button buttonType="primary" label="Get a Free Estimate" backgroundColor="blue" textColor='white' link="/contact" />
           </div>
           </>
   );

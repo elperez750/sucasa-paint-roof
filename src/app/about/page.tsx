@@ -118,11 +118,11 @@ export default function page() {
 
       <CompanySlider />
       <CallToAction />
-      <ServiceBlock image={Bellevue.src} headerText="Meet the Boss" children="He is the man"/>
+      <ServiceBlock image={Bellevue.src} headerText="Our Vision for the Future" children="At Sucasa Paint and Roof, our vision is centered on expanding our footprint and enhancing our capabilities in both the painting and roofing industries. As we move forward, we aim to adopt cutting-edge technologies and methodologies that not only improve the efficiency and quality of our services but also reduce our environmental impact."/>
 
 
 
-      <div className="flex flex-col">
+      <div className="flex flex-col mt-20">
         <h1 className="text-6xl text-center font-poppins text-blue font-bold mb-6">
           Areas We Serve
         </h1>
