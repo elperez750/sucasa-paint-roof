@@ -24,7 +24,7 @@ export default function ImageHeader({ imageUrl, heading, subheading, buttonLabel
         style={{ objectFit: "cover", zIndex: -1 }}
       />
 
-      <div className="absolute top-0 left-0 right-0 bottom-0 bg-black bg-opacity-60"></div>
+      <div className="absolute top-0 left-0 right-0 bottom-0 bg-black bg-opacity-40"></div>
 
       <div className="z-10 text-center">
         <h1 className="font-poppins font-extrabold text-white text-3xl lg:text-8xl text-shadow-lg">

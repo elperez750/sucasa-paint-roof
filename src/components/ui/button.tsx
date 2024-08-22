@@ -29,7 +29,7 @@ const Button = ({
   const pathname = usePathname();
 
   // Base classes for the button
-  const baseClasses = `py-2 px-6 shadow-lg focus:outline-none focus:ring-2 focus:ring-opacity-50 font-poppins font-semibold text-xs mt-5 transition-transform duration-300 ease-in-out ${className}`;
+  const baseClasses = `py-2 px-6 shadow-lg focus:outline-none focus:ring-2 focus:ring-opacity-50 font-poppins font-semibold text-md mt-5 transition-transform duration-300 ease-in-out ${className}`;
   
   // Determine button styling based on buttonType
   const buttonClasses =

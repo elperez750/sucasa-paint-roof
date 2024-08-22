@@ -11,6 +11,8 @@
   "dependencies": {
     "@formspree/react": "^2.5.1",
     "@heroicons/react": "^1.0.6",
+    "framer-motion": "^11.3.29",
+    "lucide-react": "^0.429.0",
     "next": "latest",
     "react": "^18",
     "react-dom": "^18",
