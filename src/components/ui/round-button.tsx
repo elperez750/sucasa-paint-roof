@@ -18,7 +18,7 @@ const RoundButton: React.FC<RoundButtonProps> = ({
   className = "",
 }) => {
   const getButtonClasses = () => {
-    let baseClasses = `py-2 px-6 shadow rounded-md font-medium font-poppins text-lg ${className} `;
+    let baseClasses = `py-2 px-6 shadow rounded-md font-medium font-poppins text-xs lg:text-lg ${className} `;
     if (buttonType === "primary") {
       return `${baseClasses} bg-${backgroundColor} text-white focus:ring-${backgroundColor}`;
     } else {

@@ -6,21 +6,27 @@ interface FormInputProps {
   textColor?: string;
   backgroundColor?: string;
   placeholder: string;
+  name: string;
   borderColor: string;
   colSpan?: number;
   rowSpan?: number;
   className?: string;
+  value: string;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => void;
 }
 export default function FormInput({
   header,
   inputSize,
   backgroundColor = "white",
+  name,
   textColor = "black",
   placeholder,
   borderColor,
+  value,
   colSpan = 1,
   rowSpan = 1,
-  className = ""
+  className = "",
+  onChange,
 }: FormInputProps) {
   const gridSpanClass = `col-span-${colSpan} row-span-${rowSpan}`;
 
@@ -38,18 +44,26 @@ export default function FormInput({
       <h1 className="text-lg font-bold text-white mb-2">{header}</h1>
       {inputSize === "regular" ? (
         <input
+          name={name}
+          onChange={onChange}
           type="text"
           className={`${baseClasses}`}
           placeholder={placeholder}
           style={styles}
+          value={value}
         />
       ) : (
         
           <textarea
-            className={`${baseClasses} h-56`} // h-48 is an arbitrary height, adjust as needed
+          
+            className={`${baseClasses} h-56`} 
             placeholder={placeholder}
+            onChange={onChange}
+            name={name}
             rows={2}
             cols={2}
+            style={styles}
+            value={value}
           ></textarea>
       
         

@@ -70,7 +70,7 @@ export default function AboutSection() {
                 {/* flex-1 allows this div to fill the rest of the card space */}
                 <div>
                   <div className="text-sm font-semibold mb-2">
-                    <h1 className="font-poppins text-3xl font-bold text-center">
+                    <h1 className="font-poppins text-xl md:text-3xl font-bold text-center">
                       Our Mission
                     </h1>
                     <span className="block h-1 bg-red w-full mt-2"></span>
@@ -117,7 +117,7 @@ export default function AboutSection() {
                 {/* flex-1 allows this div to fill the rest of the card space */}
                 <div>
                   <div className="text-sm font-semibold mb-2 lg:text-xl">
-                    <h1 className="font-poppins text-3xl font-bold text-center">
+                    <h1 className="font-poppins text-xl md:text-3xl font-bold text-center">
                       Our Promise
                     </h1>
                     <span className="block h-1 bg-red w-full mt-2"></span>
