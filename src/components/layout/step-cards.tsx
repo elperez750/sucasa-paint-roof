@@ -25,6 +25,8 @@ const StepCard = ({
             alt="Background Image"
             layout="fill"
             objectFit="cover"
+            placeholder="blur"
+            blurDataURL={imageUrl}
           />
           <div className="absolute inset-x-0 bottom-0 flex justify-center items-center h-1/2">
             <div className="flex flex-col justify-center items-center bg-white rounded-full w-40 h-40 transform translate-y-3/4">

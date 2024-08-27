@@ -101,6 +101,8 @@ export default function Page() {
         imageUrl={exteriorpage.src}
         heading="Exterior"
         subheading="Explore a world where comfort meets impeccable taste."
+        color="white"
+        imageBlur={exteriorpage.blurDataURL}
       />
       <CallToAction />
       <StarterServicesSection

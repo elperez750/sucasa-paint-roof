@@ -82,8 +82,10 @@ export default function Page() {
       <Navbar />
       <ImageHeader
         imageUrl={pressureheader.src}
+        imageBlur={pressureheader.blurDataURL}
         heading="Pressure Washing Services"
         subheading="Explore a world where cleanliness meets perfection."
+        color="white"
       />
       <CallToAction />
       <StarterServicesSection

@@ -100,8 +100,10 @@ export default function Page() {
       <Navbar />
       <ImageHeader
         imageUrl={roofheader.src}
+        imageBlur={roofheader.blurDataURL}
         heading="Roofing Services"
         subheading="Explore a world where comfort meets impeccable taste."
+        color="white"
       />
       <CallToAction />
       <StarterServicesSection

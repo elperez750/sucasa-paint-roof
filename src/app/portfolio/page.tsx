@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState } from "react";
 import Navbar from "@/components/layout/navbar";
 import ImageHeader from "@/components/layout/image-header";
@@ -9,14 +10,17 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ImageSlider } from "@/components/ui/imageSlider";
 import { projects, sortByType } from "@/data/projects";
 import ProjectFilterButtons from "@/components/layout/projectFilterButtons";
+import { StaticImageData } from "next/image";
 
 export default function Page() {
   const [sortBy, setSortBy] = useState<sortByType>("All");
-  const [images, setCurrentImages] = useState<string[]>([]);
+  const [images, setCurrentImages] = useState<
+    { src: string; blurDataURL: string }[]
+  >([]);
   const [showSlider, setShowSlider] = useState(false);
 
-  const openSlider = (images: string[]) => {
-    setCurrentImages(images);
+  const openSlider = (projectImages: { src: string; blurDataURL: string }[]) => {
+    setCurrentImages(projectImages);
     setShowSlider(true);
   };
 
@@ -24,6 +28,8 @@ export default function Page() {
     setCurrentImages([]);
     setShowSlider(false);
   };
+
+
 
   const sortedProjects = projects.filter(
     (project) => project.projectType === sortBy || sortBy === "All"
@@ -34,14 +40,19 @@ export default function Page() {
       <Navbar />
       <ImageHeader
         imageUrl={projectheader.src}
+        imageBlur={projectheader.blurDataURL}
         heading="Projects"
         subheading="See what makes us a premiere painting company in Western Washington!"
+        color="white"
       />
 
       <div className="container mx-auto p-5">
-        <h1 className="font-poppins text-7xl text-center text-red my-10">Our Projects</h1>
+        <h1 className="font-poppins text-7xl text-center text-red my-10">
+          Our Projects
+        </h1>
         <h4 className="font-poppins text-lg text-center text-blue my-5">
-          Explore our portfolio of projects that have earned us the trust and loyalty of countless clients...
+          Explore our portfolio of projects that have earned us the trust and
+          loyalty of countless clients...
         </h4>
       </div>
 
@@ -58,8 +69,16 @@ export default function Page() {
               transition={{ duration: 0.3 }}
             >
               <ProjectCard
-                showImageCarousel={() => openSlider(project.projectImages)}
-                imageSrc={project.imageSrc}
+                showImageCarousel={() =>
+                  openSlider(
+                    project.projectImages.map((image) => ({
+                      src: image.src,
+                      blurDataURL: image.blurDataURL || "",
+                    }))
+                  )
+                }
+                imageSrc={project.imageSrc[0]}
+                blurSrc={project.blurDataURL[0]}
                 headingText={project.headingText}
                 projectType={project.projectType}
               />
@@ -67,8 +86,13 @@ export default function Page() {
           ))}
         </AnimatePresence>
       </div>
-
-      {showSlider && <ImageSlider imageUrls={images} onClose={closeSlider} />}
+      {showSlider && (
+        <ImageSlider
+          imageUrls={images.map((image) => image.src)}
+          imageBlurUrls={images.map((image) => image.blurDataURL)}
+          onClose={closeSlider}
+        />
+      )}
 
       <Footer />
     </div>

@@ -11,8 +11,10 @@ export default function Page() {
       <Navbar />
       <ImageHeader
         imageUrl={contactUsImage.src}
+        imageBlur={contactUsImage.blurDataURL}
         heading="Contact Us"
         subheading="We'd love to hear from you!"
+        color="white"
       />
       
       <ContactForm />

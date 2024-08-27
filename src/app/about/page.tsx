@@ -2,6 +2,8 @@ import React from "react";
 import ImageHeader from "@/components/layout/image-header";
 import Navbar from "@/components/layout/navbar";
 import aboutheader from "../../../public/images/about/aboutheader.jpg";
+import Jesus from "../../../public/images/projects/IMG_4972.png"
+
 import CallToAction from "@/components/layout/call-to-action";
 import CompanySlider from "@/components/layout/services/company-slider";
 import Footer from "@/components/layout/footer";
@@ -30,7 +32,9 @@ export default function Page() {
       <ImageHeader
         imageUrl={aboutheader.src}
         heading="About"
+        imageBlur={aboutheader.blurDataURL}
         subheading="Learn about what Sucasa Paint and Roof can do for you."
+        color="white"
       />
 
       <div className="flex flex-col justify-center items-center xl:flex-row">
@@ -50,10 +54,10 @@ export default function Page() {
           <div className="flex flex-col justify-center items-center xl:flex-row">
             <div className="relative w-full h-96 xl:mr-10">
               <Image
-                src={aboutheader}
+                src={Jesus}
                 alt="Decorative image"
-                layout="fill"
-                objectFit="cover"
+                fill
+                style={{ objectFit: "cover" }}
                 className="rounded-lg shadow-md object-cover"
               />
             </div>

@@ -51,7 +51,7 @@ export default function AboutSection() {
       {/* Container for both of the cards */}
       <div className="flex flex-col justify-center items-center mt-20 xl:flex-row">
         {/* Container for the first pair of cards */}
-        <div className="relative w-[20rem] h-[16rem] md:w-[30rem] md:h-[24rem] lg:w-[40rem] lg:h-[32rem] xl:mr-20 shadow transition duration-300 ease-in-out hover:shadow-lg hover:scale-105 hover:bg-gray cursor-pointer">
+        <div className="relative w-[20rem] h-[16rem] md:w-[30rem] md:h-[24rem] lg:w-[40rem] lg:h-[32rem] xl:mr-20 shadow transition duration-300 ease-in-out hover:shadow-lg hover:scale-105 hover:bg-gray">
           {/* Background Card */}
           <div className="absolute inset-0 bg-blue rounded-lg shadow-lg" />
           {/* Foreground Card */}
@@ -61,8 +61,8 @@ export default function AboutSection() {
                 <Image
                   src="/images/home/jesus.jpg"
                   alt="Sucasa Paint Logo"
-                  layout="fill"
-                  objectFit="cover"
+                  fill
+                  style={{ objectFit: "cover" }}
                 />
               </div>
               <div className="flex-1 p-6 flex flex-col justify-between">
@@ -91,6 +91,7 @@ export default function AboutSection() {
                     buttonType="secondary"
                     backgroundColor="black"
                     label="Learn More"
+                    link="/about"
                   />
                 </div>
               </div>
@@ -98,7 +99,7 @@ export default function AboutSection() {
           </div>
         </div>
 
-        <div className="mt-20 relative w-[20rem] h-[16rem] md:w-[30rem] md:h-[24rem] lg:w-[40rem] lg:h-[32rem] xl:mt-0 shadow transition duration-300 ease-in-out hover:shadow-lg hover:scale-105 hover:bg-gray-100 cursor-pointer">
+        <div className="mt-20 relative w-[20rem] h-[16rem] md:w-[30rem] md:h-[24rem] lg:w-[40rem] lg:h-[32rem] xl:mt-0 shadow transition duration-300 ease-in-out hover:shadow-lg hover:scale-105 hover:bg-gray-100 ">
           {/* Background Card */}
           <div className="absolute inset-0 bg-blue rounded-lg shadow-lg" />
           {/* Foreground Card */}
@@ -108,8 +109,8 @@ export default function AboutSection() {
                 <Image
                   src="/images/home/paintbrush.jpg"
                   alt="paintbrush"
-                  layout="fill"
-                  objectFit="cover"
+                  fill
+                  style={{ objectFit: "cover" }}
                 />
               </div>
               <div className="flex-1 p-6 flex flex-col justify-between">
@@ -137,6 +138,7 @@ export default function AboutSection() {
                     buttonType="secondary"
                     backgroundColor="black"
                     label="Get Started"
+                    link="/contact"
                   />
                 </div>
               </div>

@@ -101,9 +101,12 @@ export default function Page() {
     <>
       <Navbar />
       <ImageHeader
+      
         imageUrl={Interior.src}
+        imageBlur={Interior.blurDataURL}
         heading="Interior"
         subheading="Explore a world where comfort meets impeccable taste."
+        color="white"
       />
       <CallToAction />
       <StarterServicesSection

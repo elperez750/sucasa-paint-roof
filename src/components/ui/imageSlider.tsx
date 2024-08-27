@@ -1,13 +1,14 @@
-import { useState } from "react";
-import Image from "next/image";
+import { useState, useEffect } from "react";
+import Image, {StaticImageData} from "next/image";
 import { ArrowLeft, ArrowRight, X } from "lucide-react";
 
 type ImageSliderProps = {
   imageUrls: string[];
+  imageBlurUrls: string[];
   onClose: () => void;
 };
 
-export function ImageSlider({ imageUrls, onClose }: ImageSliderProps) {
+export function ImageSlider({ imageUrls, imageBlurUrls, onClose }: ImageSliderProps) {
   const [imageIndex, setImageIndex] = useState(0);
 
   const nextImage = () => {
@@ -22,19 +23,24 @@ export function ImageSlider({ imageUrls, onClose }: ImageSliderProps) {
     );
   };
 
+
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 ">
-      <div className="relative w-full h-full flex items-center justify-center ">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80">
+      <div className="relative w-full h-full flex items-center justify-center">
         {/* Background Blurred Image */}
-        <div className="absolute inset-0">
-          <Image
-            src={imageUrls[imageIndex]}
-            alt="Image Background"
-            fill
-            style={{ objectFit: "cover" }}
-            className="blur-2xl opacity-50"
-          />
-        </div>
+        {imageUrls.length > 0 && (
+          <div className="absolute inset-0">
+            <Image
+              src={imageUrls[imageIndex]}
+              alt="Image"
+              fill
+              style={{ objectFit: "cover" }}
+              placeholder="blur"
+              blurDataURL={imageBlurUrls[imageIndex]}
+              className="blur-2xl opacity-50"
+            />
+          </div>
+        )}
 
         {/* Main Image */}
         <div className="relative z-10">
@@ -43,6 +49,8 @@ export function ImageSlider({ imageUrls, onClose }: ImageSliderProps) {
             alt="Image"
             width={900}
             height={900}
+            placeholder="blur"
+            blurDataURL={imageBlurUrls[imageIndex]}
             className="object-contain"
           />
         </div>

@@ -1,6 +1,5 @@
 import React from "react";
 import ImageHeader from "./image-header";
-import CallToAction from "./call-to-action";
 import TextHeader from "../ui/text-header";
 import StepCard from "./step-cards";
 import Button from "../ui/button";
@@ -13,6 +12,7 @@ export default function LocationSteps() {
         subheading="Since 2001, Sucasa Paint and Roof Care has proudly served the Seattle community, ensuring every customer feels completely satisfied. We're not just a company; we're your neighbors, dedicated to transforming your homes with our painting and roofing services."
         imageUrl="/images/home/seattle.jpeg"
         buttonLabel="View Service Areas"
+        color="white"
       />
       <div className="flex flex-col justify-center items-center mt-20">
         <TextHeader headerText="A seamless experience from start to finish" />

@@ -12,17 +12,22 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <ImageHeader heading="Guarantee Greatness" subheading="Let our painting experts add color to your world!" imageUrl={"/images/home/house.jpg"} buttonLabel="Schedule an estimate"/> 
+      <ImageHeader
+        heading="Exceeding Expectation"
+        
+        subheading="Let our painting experts add color to your world!"
+        imageUrl={"/images/home/house.jpg"}
+        buttonLabel="Schedule an estimate"
+      />
       <AboutSection />
       <CallToAction />
 
       <OurGoal />
-     <LocationSteps />
+      <LocationSteps />
       <PortfolioSection />
       <MiniEstimateForm />
       <CallToAction />
       <Footer />
-     
     </>
   );
 }

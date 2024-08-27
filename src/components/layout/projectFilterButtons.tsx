@@ -1,11 +1,12 @@
 // src/components/layout/FilterButtons.tsx
 import React from "react";
-import { sortByType } from "@/data/projects";
+import { sortByType } from "../../data/projects"
 
 type FilterButtonsProps = {
   currentFilter: sortByType;
   onFilterChange: (filter: sortByType) => void;
 };
+
 
 export default function ProjectFilterButtons({ currentFilter, onFilterChange }: FilterButtonsProps) {
   return (
