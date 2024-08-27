@@ -21,15 +21,21 @@ export default function ImageHeader({
 }: ImageHeaderProps) {
   return (
     <div className="relative w-full h-[70vh] flex justify-center items-center">
-      <Image
+      {imageBlur? <Image
         src={imageUrl}
         alt={heading}
         fill
         style={{ objectFit: "cover", zIndex: -1 }}
         placeholder="blur"
         blurDataURL={imageBlur}
-      />
-
+      /> :
+      <Image
+        src={imageUrl}
+        alt={heading}
+        fill
+        style={{ objectFit: "cover", zIndex: -1 }} 
+      />}
+     
       <div className="absolute top-0 left-0 right-0 bottom-0 bg-black bg-opacity-30"></div>
 
       <div className="z-10 text-center">
