@@ -27,7 +27,7 @@ export default function ProjectCard({
       <div className="w-full h-96 relative">
         <Image
           src={imageSrc}
-          alt="Project Image"
+          alt="Project image"
           fill
           style={{ objectFit: "cover" }}
           placeholder="blur"
