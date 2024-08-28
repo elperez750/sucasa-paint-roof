@@ -16,6 +16,7 @@
     "@formspree/react": "^2.5.1",
     "@heroicons/react": "^1.0.6",
     "@plaiceholder/next": "^3.0.0",
+    "amqplib": "^0.10.4",
     "axios": "^1.7.5",
     "core-js": "^3.38.1",
     "framer-motion": "^11.3.29",
