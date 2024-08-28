@@ -16,7 +16,7 @@
     "core-js": "^3.38.1",
     "framer-motion": "^11.3.29",
     "lucide-react": "^0.429.0",
-    "next": "latest",
+    "next": "^14.2.7",
     "plaiceholder": "^3.0.0",
     "react": "^18",
     "react-dom": "^18",
