@@ -16,8 +16,8 @@ export default function PortfolioSection() {
             Every home has a story, and our mission is to add chapters filled
             with design, functionality, and personal touches. This project
             involved a complete overhaul of a family residence, blending modern
-            aesthetics with the client's lifestyle needs to create a space
-            that's not just a house, but a true home.
+            aesthetics with the clients lifestyle needs to create a space
+            thats not just a house, but a true home.
           </p>
           <Button
             backgroundColor="red"

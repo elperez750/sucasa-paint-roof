@@ -98,14 +98,14 @@ export default function PressureWashingServicesPage() {
           headerText="Unwavering Excellence and Craftsmanship"
           additionalText="What We Do"
         >
-          At Sucasa Paint and Roof Care, we pride ourselves on delivering unwavering excellence and craftsmanship in every pressure washing project. With meticulous attention to detail and quality materials, we ensure that your home's exterior not only looks beautiful but also provides a clean and inviting environment for your family and guests. Whether it's removing stubborn stains from your driveway or revitalizing your deck, you can trust our team to deliver superior results and exceptional service from start to finish.
+          At Sucasa Paint and Roof Care, we pride ourselves on delivering unwavering excellence and craftsmanship in every pressure washing project. With meticulous attention to detail and quality materials, we ensure that your homes exterior not only looks beautiful but also provides a clean and inviting environment for your family and guests. Whether its removing stubborn stains from your driveway or revitalizing your deck, you can trust our team to deliver superior results and exceptional service from start to finish.
         </ServiceBlock>
         <ServiceBlock
           image={pressuredriveway.src}
           headerText="Enhance Your Home's Protection"
           order="right"
         >
-          Protect your home from the elements and enhance its curb appeal with our expert pressure washing services. From driveway cleaning to roof washing, our skilled team handles every aspect of your home's exterior with precision and care. With our commitment to quality craftsmanship and customer satisfaction, you can trust us to deliver lasting results that enhance the cleanliness and value of your home.
+          Protect your home from the elements and enhance its curb appeal with our expert pressure washing services. From driveway cleaning to roof washing, our skilled team handles every aspect of your homes exterior with precision and care. With our commitment to quality craftsmanship and customer satisfaction, you can trust us to deliver lasting results that enhance the cleanliness and value of your home.
         </ServiceBlock>
         <ServicesOffered />
         <ImageGrid 

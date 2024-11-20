@@ -15,8 +15,6 @@ const ServiceImage: React.FC<ServiceImageProps> = ({
   imageDescription,
   link,
 }) => {
-  const ImageWrapper = link ? Link : React.Fragment
-
   return (
     <div className="group relative w-full h-[500px] overflow-hidden rounded-lg shadow-md transition-all duration-300 ease-in-out hover:shadow-xl">
       <Image 
@@ -39,9 +37,11 @@ const ServiceImage: React.FC<ServiceImageProps> = ({
           )}
         </div>
       </div>
-      <ImageWrapper {...(link ? { href: link } : {})}>
-        <a className="absolute inset-0 z-10 cursor-pointer" aria-label={`Learn more about ${imageHeading}`} />
-      </ImageWrapper>
+      {link ? (
+        <Link href={link} className="absolute inset-0 z-10 cursor-pointer" aria-label={`Learn more about ${imageHeading}`} />
+      ) : (
+        <div className="absolute inset-0 z-10" aria-hidden="true" />
+      )}
     </div>
   )
 }

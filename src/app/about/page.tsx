@@ -45,8 +45,8 @@ export default function AboutPage() {
   return (
     <>
       <Head>
-        <title>About Sucasa Paint and Roof Care | Western Washington's Premier Painting Company</title>
-        <meta name="description" content="Learn about Sucasa Paint and Roof Care, Western Washington's premier painting company. Discover our history, services, and commitment to quality." />
+        <title>About Sucasa Paint and Roof Care | Western Washington&apos;s Premier Painting Company</title>
+        <meta name="description" content="Learn about Sucasa Paint and Roof Care, Western Washington&apos;s premier painting company. Discover our history, services, and commitment to quality." />
       </Head>
       <Navbar />
       <main className="bg-gray-50 font-poppins">
@@ -63,7 +63,7 @@ export default function AboutPage() {
             <div className="w-full xl:w-1/4">
               <CallToActionCard />
               <Testimonial
-                paragraph="I hired Sucasa Paint and Roof for an exterior painting job, and they exceeded all expectations! Their professionalism, attention to detail, and cleanliness transformed my home dramatically. It looks brand new, and the compliments haven't stopped. Highly recommend for their outstanding service and results!"
+                paragraph="I hired Sucasa Paint and Roof for an exterior painting job, and they exceeded all expectations! Their professionalism, attention to detail, and cleanliness transformed my home dramatically. It looks brand new, and the compliments haven&apos;t stopped. Highly recommend for their outstanding service and results!"
                 name="Elliott"
               />
             </div>
@@ -91,7 +91,7 @@ export default function AboutPage() {
                     Sucasa Paint and Roof was established in 2015 by Jesus Perez, a seasoned expert with over two decades of experience in the painting and roofing industry. Our company, rooted in the heart of our community, is dedicated to providing top-tier services in both residential and commercial sectors.
                   </p>
                   <p className="text-lg">
-                    We understand that each homeowner has unique needs and financial constraints. To accommodate this, we provide a range of flexible options designed to align with your specific requirements and budget. Whether you're looking to refresh a single room or repaint your entire home, we can tailor a solution that suits your needs without compromising on quality.
+                    We understand that each homeowner has unique needs and financial constraints. To accommodate this, we provide a range of flexible options designed to align with your specific requirements and budget. Whether you&apos;re looking to refresh a single room or repaint your entire home, we can tailor a solution that suits your needs without compromising on quality.
                   </p>
                 </div>
               </div>
@@ -115,7 +115,7 @@ export default function AboutPage() {
                   Quality Work Guaranteed
                 </h2>
                 <p className="text-lg">
-                  With Sucasa Paint and Roof, you're not just getting a painting service; you're making an investment in your home. We stand behind our work with a satisfaction guarantee, ensuring that the finished product meets your expectations and our high standards.
+                  With Sucasa Paint and Roof, you&apos;re not just getting a painting service; you&apos;re making an investment in your home. We stand behind our work with a satisfaction guarantee, ensuring that the finished product meets your expectations and our high standards.
                 </p>
               </div>
             </div>

@@ -48,7 +48,7 @@ const roofingFAQs: FAQ[] = [
   },
   {
     question: "Can you install new gutters without replacing the entire roof?",
-    answer: "Yes, it's possible to install new gutters without replacing the entire roof. Our team can assess your existing gutter system and provide recommendations for repairs, replacements, or upgrades based on your needs and budget.",
+    answer: "Yes, it&apos;s possible to install new gutters without replacing the entire roof. Our team can assess your existing gutter system and provide recommendations for repairs, replacements, or upgrades based on your needs and budget.",
   },
   {
     question: "How do I know if my roof needs repairs or replacement?",
@@ -88,7 +88,7 @@ export default function RoofingServicesPage() {
         <StarterServicesSection
           imageSrc={roofing.src}
           header="Roofing Services"
-          paragraph="Elevate your home's protection and aesthetic appeal with our comprehensive roofing services. From installation to repair and maintenance, we ensure top-notch craftsmanship and quality materials to safeguard your investment and enhance curb appeal. Trust our expertise to deliver exceptional results that exceed your expectations."
+          paragraph="Elevate your home&apos;s protection and aesthetic appeal with our comprehensive roofing services. From installation to repair and maintenance, we ensure top-notch craftsmanship and quality materials to safeguard your investment and enhance curb appeal. Trust our expertise to deliver exceptional results that exceed your expectations."
           buttonLabel="Get Started"
         />
         <ServiceValues />
@@ -98,11 +98,11 @@ export default function RoofingServicesPage() {
           headerText="Unwavering Excellence and Craftsmanship"
           additionalText="What we do"
         >
-          At Sucasa Paint and Roof Care, we pride ourselves on delivering unwavering excellence and craftsmanship in every roofing project. With meticulous attention to detail and quality materials, we ensure that your roof not only looks beautiful but also provides reliable protection for years to come. Whether it's a minor repair or a complete roof replacement, you can trust our team to deliver superior results and exceptional service from start to finish.
+          At Sucasa Paint and Roof Care, we pride ourselves on delivering unwavering excellence and craftsmanship in every roofing project. With meticulous attention to detail and quality materials, we ensure that your roof not only looks beautiful but also provides reliable protection for years to come. Whether it&apos;s a minor repair or a complete roof replacement, you can trust our team to deliver superior results and exceptional service from start to finish.
         </ServiceBlock>
         <ServiceBlock
           image={roofgutter.src}
-          headerText="Enhance Your Home's Protection with Expert Exterior Solutions"
+          headerText="Enhance Your Home&apos;s Protection with Expert Exterior Solutions"
           order="right"
         >
           Protect your home from the elements and enhance its curb appeal with our expert exterior solutions. From gutter installation to chimney flashing and skylight repair, our skilled team handles every aspect of your exterior with precision and care. With our commitment to quality craftsmanship and customer satisfaction, you can trust us to deliver lasting results that enhance the beauty and value of your home.
