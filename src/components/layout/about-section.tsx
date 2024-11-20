@@ -1,44 +1,77 @@
-import React from "react";
-import AboutIcon from "../ui/svg";
-import Brush from "../../../public/images/paintbrush.svg";
-import Trophy from "../../../public/images/trophy.svg";
-import Price from "../../../public/images/price.svg";
-import Hand from "../../../public/images/handshake.svg";
-import Eco from "../../../public/images/eco.svg";
-import Shield from "../../../public/images/shield.svg";
-import Button from "../ui/button";
-import Image from "next/image";
-import RoundButton from "../ui/round-button";
-import Svg from "../ui/svg";
+import React from "react"
+import Image from "next/image"
+import { FaPaintBrush, FaTrophy, FaHandshake, FaShieldAlt, FaLeaf, FaDollarSign } from "react-icons/fa"
+import Button from "../ui/button"
+import RoundButton from "../ui/round-button"
+import { IconType } from "react-icons"
 
+interface FeatureIconProps {
+  Icon: IconType
+  text: string
+}
 
+const FeatureIcon: React.FC<FeatureIconProps> = ({ Icon, text }) => (
+  <div className="flex flex-col items-center mb-8 px-4">
+    <Icon className="text-blue w-12 h-12 mb-2" />
+    <p className="text-center text-sm font-poppins">{text}</p>
+  </div>
+)
 
+interface CardProps {
+  title: string
+  description: string
+  imageSrc: string
+  buttonLabel: string
+  buttonLink: string
+}
 
-export default function AboutSection() {
+const Card: React.FC<CardProps> = ({ title, description, imageSrc, buttonLabel, buttonLink }) => (
+  <div className="relative w-full max-w-md mx-auto mb-10 xl:mb-0 xl:mx-4 shadow transition duration-300 ease-in-out hover:shadow-lg hover:scale-105 hover:bg-gray-100">
+    <div className="absolute inset-0 bg-blue rounded-lg shadow-lg" />
+    <div className="relative left-2 top-3 bg-white border rounded-lg shadow-lg overflow-hidden">
+      <div className="md:h-48 relative">
+        <Image src={imageSrc} alt={title} layout="fill" objectFit="cover" className="transition-transform duration-300 hover:scale-110" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-50" />
+      </div>
+      <div className="p-6">
+        <h2 className="font-poppins text-xl md:text-2xl font-bold text-center mb-2">{title}</h2>
+        <span className="block h-1 bg-red w-full mb-4"></span>
+        <p className="text-gray text-sm md:text-base font-poppins mb-6">{description}</p>
+        <div className="flex justify-center">
+          <RoundButton
+            buttonType="secondary"
+            backgroundColor="black"
+            label={buttonLabel}
+            link={buttonLink}
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+)
+
+const AboutSection: React.FC = () => {
   return (
-    <div>
-      <div className="text-center">
-        <h1 className="text-red font-poppins text-3xl mt-10 mb-10">
+    <section className="container mx-auto px-4 py-16">
+      <div className="text-center mb-16">
+        <h2 className="text-red font-poppins text-2xl md:text-3xl mb-4">
           When it comes to painting
-        </h1>
-        <h1 className="text-blue font-poppins font-bold text-3xl">
+        </h2>
+        <h3 className="text-blue font-poppins font-bold text-2xl md:text-3xl">
           Our work is nothing short of stunning
-        </h1>
+        </h3>
       </div>
 
-      <div className="grid grid-rows-3 grid-flow-col md:grid-rows-2 md:grid-flow-col lg:flex lg:justify-between lg:items-center mt-16 lg:mr-10 lg:ml-10">
-        <Svg svgComponent={Brush} text="Quality" width={12} height={10}/>
-        <Svg svgComponent={Trophy} text="Experience" width={12} height={10}/>
-        <Svg svgComponent={Price} text="Competitive Pricing" width={12} height={10}/>
-        <Svg
-          svgComponent={Hand}
-          text="Customer Satisfaction Guaranteed"
-          width={12} height={10}
-        />
-        <Svg svgComponent={Shield} text="Licensed and Insured" width={12} height={10}/>
-        <Svg svgComponent={Eco} text="Eco-Friendly" width={12} height={10}/>
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-16">
+        <FeatureIcon Icon={FaPaintBrush} text="Quality" />
+        <FeatureIcon Icon={FaTrophy} text="Experience" />
+        <FeatureIcon Icon={FaDollarSign} text="Competitive Pricing" />
+        <FeatureIcon Icon={FaHandshake} text="Customer Satisfaction Guaranteed" />
+        <FeatureIcon Icon={FaShieldAlt} text="Licensed and Insured" />
+        <FeatureIcon Icon={FaLeaf} text="Eco-Friendly" />
       </div>
-      <div className="text-center mt-20">
+
+      <div className="text-center mb-16">
         <Button
           backgroundColor="black"
           buttonType="primary"
@@ -48,104 +81,24 @@ export default function AboutSection() {
         />
       </div>
 
-      {/* Container for both of the cards */}
-      <div className="flex flex-col justify-center items-center mt-20 xl:flex-row">
-        {/* Container for the first pair of cards */}
-        <div className="relative w-[20rem] h-[16rem] md:w-[30rem] md:h-[24rem] lg:w-[40rem] lg:h-[32rem] xl:mr-20 shadow transition duration-300 ease-in-out hover:shadow-lg hover:scale-105 hover:bg-gray">
-          {/* Background Card */}
-          <div className="absolute inset-0 bg-blue rounded-lg shadow-lg" />
-          {/* Foreground Card */}
-          <div className="absolute left-4 top-6 w-[20rem] h-[16rem] md:w-[30rem] md:h-[24rem] lg:w-[40rem] lg:h-[32rem] bg-white border rounded-lg shadow-lg overflow-hidden">
-            <div className="absolute inset-0 flex flex-col items-center justify-center">
-              <div className="hidden md:block md:w-full md:h-1/2 md:relative">
-                <Image
-                  src="/images/home/jesus.jpg"
-                  alt="Sucasa Paint Logo"
-                  fill
-                  style={{ objectFit: "cover" }}
-                />
-              </div>
-              <div className="flex-1 p-6 flex flex-col justify-between">
-                {" "}
-                {/* flex-1 allows this div to fill the rest of the card space */}
-                <div>
-                  <div className="text-sm font-semibold mb-2">
-                    <h1 className="font-poppins text-xl md:text-3xl font-bold text-center">
-                      Our Mission
-                    </h1>
-                    <span className="block h-1 bg-red w-full mt-2"></span>
-                  </div>
-
-                  <p className="text-gray text-xs lg:text-base font-poppins">
-                    Sucasa Paint and Roof, a leading bonded and insured painting
-                    and roofing contractor, proudly serves the Seattle area.
-                    Owned and operated by Jesus Perez, we are committed to
-                    excellence in every project. Jesus hands-on approach and
-                    meticulous attention to detail ensure that our work not only
-                    meets but exceeds the highest standards of quality,
-                    professionalism, and craftsmanship
-                  </p>
-                </div>
-                <div className="flex mt-4 justify-center items-center">
-                  <RoundButton
-                    buttonType="secondary"
-                    backgroundColor="black"
-                    label="Learn More"
-                    link="/about"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-20 relative w-[20rem] h-[16rem] md:w-[30rem] md:h-[24rem] lg:w-[40rem] lg:h-[32rem] xl:mt-0 shadow transition duration-300 ease-in-out hover:shadow-lg hover:scale-105 hover:bg-gray-100 ">
-          {/* Background Card */}
-          <div className="absolute inset-0 bg-blue rounded-lg shadow-lg" />
-          {/* Foreground Card */}
-          <div className="absolute left-4 top-6 w-[20rem] h-[16rem] md:w-[30rem] md:h-[24rem] lg:w-[40rem] lg:h-[32rem] bg-white border rounded-lg shadow-lg">
-            <div className="absolute inset-0 flex flex-col items-center justify-center">
-              <div className="hidden md:block md:w-full md:h-1/2 md:relative">
-                <Image
-                  src="/images/home/paintbrush.jpg"
-                  alt="paintbrush"
-                  fill
-                  style={{ objectFit: "cover" }}
-                />
-              </div>
-              <div className="flex-1 p-6 flex flex-col justify-between">
-                {" "}
-                {/* flex-1 allows this div to fill the rest of the card space */}
-                <div>
-                  <div className="text-sm font-semibold mb-2 lg:text-xl">
-                    <h1 className="font-poppins text-xl md:text-3xl font-bold text-center">
-                      Our Promise
-                    </h1>
-                    <span className="block h-1 bg-red w-full mt-2"></span>
-                  </div>
-                  <p className="text-gray font-poppins text-xs lg:text-base">
-                    With Sucasa Paint and Roof, we guarantee top-quality
-                    painting and roofing services tailored to meet your needs.
-                    Your satisfaction is our priority, with a commitment to
-                    professionalism, timely completion, and open communication.
-                    We promise not just to meet your expectations but to exceed
-                    them, ensuring your project is completed to the highest
-                    standard with peace of mind included.
-                  </p>
-                </div>
-                <div className="flex mt-4 justify-center items-center">
-                  <RoundButton
-                    buttonType="secondary"
-                    backgroundColor="black"
-                    label="Get Started"
-                    link="/contact"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div className="flex flex-col xl:flex-row justify-center items-stretch space-y-10 xl:space-y-0 xl:space-x-8">
+        <Card
+          title="Our Mission"
+          description="Sucasa Paint and Roof, a leading bonded and insured painting and roofing contractor, proudly serves the Seattle area. Owned and operated by Jesus Perez, we are committed to excellence in every project. Jesus' hands-on approach and meticulous attention to detail ensure that our work not only meets but exceeds the highest standards of quality, professionalism, and craftsmanship."
+          imageSrc="/images/home/jesus.jpg"
+          buttonLabel="Learn More"
+          buttonLink="/about"
+        />
+        <Card
+          title="Our Promise"
+          description="With Sucasa Paint and Roof, we guarantee top-quality painting and roofing services tailored to meet your needs. Your satisfaction is our priority, with a commitment to professionalism, timely completion, and open communication. We promise not just to meet your expectations but to exceed them, ensuring your project is completed to the highest standard with peace of mind included."
+          imageSrc="/images/home/paintbrush.jpg"
+          buttonLabel="Get Started"
+          buttonLink="/contact"
+        />
       </div>
-    </div>
-  );
+    </section>
+  )
 }
+
+export default AboutSection

@@ -1,14 +1,14 @@
-import React from "react";
-import Image from "next/image";
-import Button from "../ui/button";
+import Image from "next/image"
+import Link from "next/link"
 
 interface ImageHeaderProps {
-  imageUrl: string;
-  heading: string;
-  subheading: string;
-  buttonLabel?: string;
-  color?: string;
-  imageBlur?: string;
+  imageUrl: string
+  heading: string
+  subheading: string
+  buttonLabel?: string
+  buttonLink?: string
+  color?: string
+  imageBlur?: string
 }
 
 export default function ImageHeader({
@@ -16,52 +16,37 @@ export default function ImageHeader({
   heading,
   subheading,
   buttonLabel,
-  color,
+  buttonLink = "/contact",
+  color = "white",
   imageBlur,
 }: ImageHeaderProps) {
   return (
-    <div className="relative w-full h-[70vh] flex justify-center items-center">
-      {imageBlur? <Image
-        src={imageUrl}
-        alt={heading}
-        fill
-        style={{ objectFit: "cover", zIndex: -1 }}
-        placeholder="blur"
-        blurDataURL={imageBlur}
-      /> :
+    <div className="font-poppins relative w-full h-[70vh] overflow-hidden">
       <Image
         src={imageUrl}
         alt={heading}
         fill
-        style={{ objectFit: "cover", zIndex: -1 }} 
-      />}
-     
-      <div className="absolute top-0 left-0 right-0 bottom-0 bg-black bg-opacity-30"></div>
-
-      <div className="z-10 text-center">
-        {color ? (
-          <h1 className={`font-poppins font-extrabold text-${color} text-3xl lg:text-8xl text-shadow-lg`}>
-            {heading}
-          </h1>
-        ) : (
-          <h1 className="font-poppins font-extrabold text-dark_gray text-3xl lg:text-8xl text-shadow-lg">
-            {heading}
-          </h1>
-        )}
-
-        <h3 className="font-poppins text-white my-20 text-sm md:text-2xl font-medium ">
+        className="object-cover"
+        placeholder={imageBlur ? "blur" : "empty"}
+        blurDataURL={imageBlur}
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/30" />
+      <div className="relative h-full flex flex-col justify-center items-center text-center p-6">
+        <h1 className={`font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-${color} mb-4 max-w-3xl`}>
+          {heading}
+        </h1>
+        <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white mb-8 max-w-2xl">
           {subheading}
-        </h3>
+        </p>
         {buttonLabel && (
-          <Button
-            backgroundColor="red"
-            buttonType="primary"
-            textColor="white"
-            label={buttonLabel}
-            link="/contact"
-          />
+          <Link
+            href={buttonLink}
+            className="inline-block bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-6 rounded-md transition duration-300 ease-in-out"
+          >
+            {buttonLabel}
+          </Link>
         )}
       </div>
     </div>
-  );
+  )
 }
