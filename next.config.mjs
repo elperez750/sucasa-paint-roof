@@ -1,12 +1,12 @@
-// next.config.js
-import withPlaiceholder from "@plaiceholder/next";
- 
-/**
- * @type {import('next').NextConfig}
- */
+const withPlaiceholder = require("@plaiceholder/next");
 
-
+/** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
+  images: {
+    domains: ['your-domain.com'], // Add any domains you're loading images from
+  },
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
@@ -17,4 +17,4 @@ const nextConfig = {
   },
 };
 
-export default withPlaiceholder(nextConfig);
+module.exports = withPlaiceholder(nextConfig);
