@@ -1,94 +1,142 @@
-"use client";
+"use client"
 
-
-import React, { useState } from "react";
-import Phone from "../../../public/images/phone.svg";
-import Hamburger from "../../../public/images/hamburger.svg";
-import Exit from "../../../public/images/exit.svg";
-import Image from "next/image";
-import Link from "next/link";
+import { useState, useEffect } from "react"
+import Phone from "../../../public/images/phone.svg"
+import Hamburger from "../../../public/images/hamburger.svg"
+import Exit from "../../../public/images/exit.svg"
+import Image from "next/image"
+import Link from "next/link"
 import { usePathname } from "next/navigation"
 
 export default function Navbar() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const pathname = usePathname(); // Use useRouter
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+  const pathname = usePathname()
+
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10)
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  // Close mobile menu when changing routes
+  useEffect(() => {
+    setIsMobileMenuOpen(false)
+  }, [pathname])
 
   return (
-    <>
-      <div className="w-full h-16 bg-blue flex items-center justify-start">
-        <div className="flex items-center justify-start space-x-10 ml-10">
-          <div className="w-8 h-8 fill-white"><Phone /></div>
-          <span className="text-white text-lg italic font-poppins">425-246-5330</span>
+    <header className="sticky top-0 z-50 w-full">
+      {/* Top info bar */}
+      <div className="w-full h-12 md:h-16 bg-blue flex items-center justify-start shadow-sm">
+        <div className="flex items-center justify-start space-x-4 md:space-x-6 ml-4 md:ml-10">
+          <div className="w-6 h-6 md:w-8 md:h-8 fill-white">
+            <Phone />
+          </div>
+          <span className="text-white text-base md:text-lg italic font-poppins tracking-wide">425-246-5330</span>
         </div>
       </div>
 
-      <div className="w-full h-36 bg-white flex items-center justify-between px-16">
-        <div className="flex items-start">
-          <Image src="/images/sucasapaint.png" alt="Sucasa Paint Logo" width={208} height={105} />
+      {/* Main navigation */}
+      <div
+        className={`w-full bg-white flex items-center justify-between px-4 md:px-16 transition-all duration-300 ${
+          isScrolled ? "h-20 shadow-md" : "h-28 md:h-36"
+        }`}
+      >
+        <div className="flex items-center h-full py-2">
+          <Image
+            src="/images/sucasapaint.png"
+            alt="Sucasa Paint Logo"
+            width={isScrolled ? 140 : 180}
+            height={isScrolled ? 70 : 90}
+            className="transition-all duration-300 object-contain"
+          />
         </div>
 
-        <button className="md:hidden" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-          {isMobileMenuOpen ? <Exit className="fill-blue h-10 w-10" /> : <Hamburger className="fill-blue h-10 w-10" />}
+        {/* Mobile menu button */}
+        <button
+          className="md:hidden focus:outline-none transition-transform duration-200 hover:scale-105"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+        >
+          {isMobileMenuOpen ? <Exit className="fill-blue h-8 w-8" /> : <Hamburger className="fill-blue h-8 w-8" />}
         </button>
 
-        <div className="hidden text-md md:flex items-end lg:text-xl space-x-6 lg:space-x-10 text-black font-poppins">
-          {/* Directly use router.pathname for conditional styling within a span inside Link */}
-          <Link href="/">
-            <span className={`${pathname === "/" ? "text-red" : "text-black"} cursor-pointer`}>Home</span>
-          </Link>
-          <Link href="/interior">
-            <span className={`${pathname === "/interior" ? "text-red" : "text-black"} cursor-pointer`}>Interior</span>
-          </Link>
-          <Link href="/exterior">
-            <span className={`${pathname === "/exterior" ? "text-red" : "text-black"} cursor-pointer`}>Exterior</span>
-          </Link>
-          <Link href="/roofing">
-            <span className={`${pathname === "/roofing" ? "text-red" : "text-black"} cursor-pointer`}>Roofing</span>
-          </Link>
-          <Link href="/pressure-washing">
-            <span className={`${pathname === "/pressure-washing" ? "text-red" : "text-black"} cursor-pointer`}>Washing</span>
-          </Link>
-          <Link href="/about">
-            <span className={`${pathname === "/about" ? "text-red" : "text-black"} cursor-pointer`}>About</span>
-          </Link>
-          <Link href="/portfolio">
-            <span className={`${pathname === "/portfolio" ? "text-red" : "text-black"} cursor-pointer`}>Projects</span>
-          </Link>
-          <Link href="/contact">
-            <span className={`${pathname === "/contact" ? "text-red" : "text-black"} cursor-pointer`}>Contact</span>
-          </Link>
-          
-        </div>
+        {/* Desktop navigation */}
+        <nav className="hidden md:flex items-end lg:text-xl space-x-6 lg:space-x-10 font-poppins">
+          {[
+            { href: "/", label: "Home" },
+            { href: "/interior", label: "Interior" },
+            { href: "/exterior", label: "Exterior" },
+            { href: "/roofing", label: "Roofing" },
+            { href: "/pressure-washing", label: "Washing" },
+            { href: "/about", label: "About" },
+            { href: "/portfolio", label: "Projects" },
+            { href: "/contact", label: "Contact" },
+          ].map((link) => (
+            <Link key={link.href} href={link.href} className="relative group">
+              <span
+                className={`${
+                  pathname === link.href ? "text-red font-medium" : "text-black"
+                } cursor-pointer hover:text-red transition-colors duration-200`}
+              >
+                {link.label}
+              </span>
+              <span
+                className={`absolute -bottom-2 left-0 w-0 h-0.5 bg-red transition-all duration-300 ${
+                  pathname === link.href ? "w-full" : "group-hover:w-full"
+                }`}
+              ></span>
+            </Link>
+          ))}
+        </nav>
       </div>
 
-      {isMobileMenuOpen && (
-        <div className="flex flex-col font-poppins bg-white shadow-md absolute w-full z-20 md:hidden">
-          <Link href="/">
-            <span className={`${pathname === "/" ? "text-red" : "text-black"} cursor-pointer`}>Home</span>
-          </Link>
-          <Link href="/interior">
-            <span className={`${pathname === "/interior" ? "text-red" : "text-black"} cursor-pointer`}>Interior</span>
-          </Link>
-          <Link href="/exterior">
-            <span className={`${pathname === "/exterior" ? "text-red" : "text-black"} cursor-pointer`}>Exterior</span>
-          </Link>
-          <Link href="/roofing">
-            <span className={`${pathname === "/roofing" ? "text-red" : "text-black"} cursor-pointer`}>Roofing</span>
-          </Link>
-          <Link href="/pressure-washing">
-            <span className={`${pathname === "/pressure-washing" ? "text-red" : "text-black"} cursor-pointer`}>Washing</span>
-          </Link>
-          <Link href="/about">
-            <span className={`${pathname === "/about" ? "text-red" : "text-black"} cursor-pointer`}>About</span>
-          </Link>
-          <Link href="/portfolio">
-            <span className={`${pathname === "/portfolio" ? "text-red" : "text-black"} cursor-pointer`}>Projects</span>
-          </Link>
-          <Link href="/contact">
-            <span className={`${pathname === "/contact" ? "text-red" : "text-black"} cursor-pointer`}>Contact</span>
-          </Link>
+      {/* Mobile menu */}
+      <div
+        className={`fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden transition-opacity duration-300 ${
+          isMobileMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+        onClick={() => setIsMobileMenuOpen(false)}
+      ></div>
+
+      <div
+        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-xl z-50 md:hidden transform transition-transform duration-300 ease-in-out ${
+          isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <div className="flex justify-end p-4">
+          <button onClick={() => setIsMobileMenuOpen(false)} className="focus:outline-none" aria-label="Close menu">
+            <Exit className="fill-blue h-8 w-8" />
+          </button>
         </div>
-      )}
-    </>
-  );
+
+        <nav className="flex flex-col font-poppins px-6 py-4 space-y-6">
+          {[
+            { href: "/", label: "Home" },
+            { href: "/interior", label: "Interior" },
+            { href: "/exterior", label: "Exterior" },
+            { href: "/roofing", label: "Roofing" },
+            { href: "/pressure-washing", label: "Washing" },
+            { href: "/about", label: "About" },
+            { href: "/portfolio", label: "Projects" },
+            { href: "/contact", label: "Contact" },
+          ].map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={`py-2 px-4 rounded-md ${
+                pathname === link.href ? "bg-blue/10 text-red font-medium" : "text-black hover:bg-gray-100"
+              } transition-colors duration-200`}
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+      </div>
+    </header>
+  )
 }
+

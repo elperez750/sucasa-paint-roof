@@ -8,16 +8,22 @@ import PortfolioSection from "@/components/layout/portfolio-section";
 import MiniEstimateForm from "@/components/layout/mini-estimate-form";
 import CallToAction from "@/components/layout/call-to-action";
 import Footer from "@/components/layout/footer";
+import headerImage from "../../public/images/projects/2298.png"
 export default function Home() {
   return (
+    
     <>
       <Navbar />
+      {/* Image with optional blur */}
       <ImageHeader
-        heading="Exceeding Expectation"
-        
-        subheading="Let our painting experts add color to your world!"
-        imageUrl={"/images/home/house.jpg"}
-        buttonLabel="Schedule an estimate"
+        imageUrl={headerImage.src}
+        heading="Transform Your Seattle Home"
+        subheading="Professional interior and exterior painting services bringing vibrant, lasting color to homes throughout the Emerald City."
+        buttonLabel="Get a Free Quote"
+        buttonLink="/contact"
+        overlayOpacity="light"
+        height="large"
+        textAlignment="center"
       />
       <AboutSection />
       <CallToAction />
