@@ -26,17 +26,18 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ) => {
     const baseClasses = `
       py-2 px-4 md:py-3 md:px-6 lg:py-4 lg:px-8
-      shadow-lg focus:outline-none focus:ring-2 focus:ring-opacity-50
+      shadow-md focus:outline-none focus:ring-2 focus:ring-opacity-50
       font-poppins font-semibold text-sm md:text-base lg:text-lg
       rounded-md md:rounded-lg
+      relative overflow-hidden
       transition-all duration-300 ease-in-out
       ${className}
     `
 
     const buttonClasses =
       buttonType === "primary"
-        ? `${baseClasses} bg-${backgroundColor} text-${textColor} hover:bg-opacity-80 hover:scale-105 active:bg-opacity-90 active:scale-100`
-        : `${baseClasses} border-2 border-${backgroundColor} text-${backgroundColor} hover:bg-${backgroundColor} hover:text-${textColor} hover:scale-105 active:bg-opacity-90 active:scale-100`
+        ? `${baseClasses} bg-${backgroundColor} text-${textColor} hover:translate-y-[-2px] hover:shadow-lg active:translate-y-[0px]`
+        : `${baseClasses} border-2 border-${backgroundColor} text-${backgroundColor} hover:translate-y-[-2px] hover:shadow-lg hover:border-opacity-70 active:translate-y-[0px]`
 
     const buttonElement = (
       <button
