@@ -96,7 +96,7 @@ const AboutSection: React.FC = () => {
       <div className="bg-blue-50 py-12 px-6 rounded-xl shadow-inner mb-20 text-center">
         <h4 className="text-2xl font-bold text-blue mb-4">Why Choose Sucasa?</h4>
         <p className="text-gray-700 max-w-2xl mx-auto text-base md:text-lg">
-          We don't just paint houses — we transform homes. From first brushstroke to final cleanup, our team ensures every detail is flawless. With transparent pricing and a trusted local presence, you're in good hands.
+          We don&rsquo;t just paint houses &mdash; we transform homes. From first brushstroke to final cleanup, our team ensures every detail is flawless. With transparent pricing and a trusted local presence, you&rsquo;re in good hands.
         </p>
       </div>
 
@@ -132,7 +132,7 @@ const AboutSection: React.FC = () => {
       {/* Quote/Testimonial */}
       <div className="bg-gray-100 px-6 py-10 rounded-lg shadow text-center">
         <blockquote className="text-lg md:text-xl italic text-gray-800 max-w-3xl mx-auto">
-          “Sucasa Paint transformed our house beyond what we imagined. They were timely, professional, and left everything spotless. Highly recommend!”
+          &ldquo;Sucasa Paint transformed our house beyond what we imagined. They were timely, professional, and left everything spotless. Highly recommend!&rdquo;
         </blockquote>
         <p className="mt-4 font-semibold text-blue">– A Happy Homeowner in Sultan, WA</p>
       </div>
