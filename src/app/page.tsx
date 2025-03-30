@@ -17,8 +17,8 @@ export default function Home() {
       {/* Image with optional blur */}
       <ImageHeader
         imageUrl={headerImage.src}
-        heading="Transform Your Seattle Home"
-        subheading="Professional interior and exterior painting services bringing vibrant, lasting color to homes throughout the Emerald City."
+        heading="Transform Your Home"
+        subheading="Professional interior and exterior painting services bringing vibrant, lasting color to homes throughout Western Washington."
         buttonLabel="Get a Free Quote"
         buttonLink="/contact"
         overlayOpacity="light"
@@ -26,12 +26,12 @@ export default function Home() {
         textAlignment="center"
       />
       <AboutSection />
+      <MiniEstimateForm />
       <CallToAction />
 
       <OurGoal />
       <LocationSteps />
       <PortfolioSection />
-      <MiniEstimateForm />
       <CallToAction />
       <Footer />
     </>

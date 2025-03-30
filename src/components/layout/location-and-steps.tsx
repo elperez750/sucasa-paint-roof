@@ -10,7 +10,7 @@ export default function LocationSteps() {
       <ImageHeader
         heading="Serving Washington since 2001"
         subheading="Since 2001, Sucasa Paint and Roof Care has proudly served the Seattle community, ensuring every customer feels completely satisfied. We're not just a company; we're your neighbors, dedicated to transforming your homes with our painting and roofing services."
-        imageUrl="/images/home/seattle.jpeg"
+        imageUrl="/images/projects/ghibi.png"
         buttonLabel="View Service Areas"
         color="white"
       />
